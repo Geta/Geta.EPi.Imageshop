@@ -18,7 +18,7 @@ Add a Imageshop property to your model:
     [ImageShopSizePreset("Thumbnail image (400x300)", 400, 300)]
     public virtual ImageShopImage MainImage { get; set; }
     
-Add a display template called ImageShopImage.cshtml:
+Add a display template, ImageShopImage.cshtml:
 
     @model Geta.EPi.ImageShop.ImageShopImage
     @if (Model != null && !string.IsNullOrWhiteSpace(Model.Url))
