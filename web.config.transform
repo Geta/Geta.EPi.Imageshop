@@ -3,6 +3,11 @@
     <configSections>
         <section name="geta.epi.imageshop" type="Geta.EPi.ImageShop.Configuration.ImageShopConfigurationSection, Geta.EPi.ImageShop" />
     </configSections>
+    <episerver.shell>
+        <protectedModules>
+            <add name="geta-epi-imageshop" />
+        </protectedModules>
+    </episerver.shell>
     <geta.epi.imageshop>
         <settings
             token="AddYourTokenHere"
