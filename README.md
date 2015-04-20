@@ -32,4 +32,4 @@ Render the property in a view:
 
 # Configuration
 
-See configuration section <geta.epi.imageshop> in web.config for examples. It is important to also add your access token there.
+See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples. It is important to also add your access token there.
