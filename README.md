@@ -30,6 +30,10 @@ Render the property in a view:
 
     @Html.PropertyFor(m => m.CurrentPage.MainImage)
 
+# TinyMCE
+
+A TinyMCE plugin is included and can be added to your XhtmlString properties. It's located under the "media" group.
+
 # Configuration
 
 See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples. It is important to also add your access token there.
