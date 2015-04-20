@@ -21,7 +21,7 @@ Add a Imageshop property to your model:
 Add a display template called ImageShopImage.cshtml:
 
     @model Geta.EPi.ImageShop.ImageShopImage
-    @if (Model != null &&!string.IsNullOrWhiteSpace(Model.Url))
+    @if (Model != null && !string.IsNullOrWhiteSpace(Model.Url))
     {
         <img src="@Model.Url" alt="@ViewData["ImageAltText"]">
     }
