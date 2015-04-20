@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>Geta.EPi.ImageShop</id>
+        <version>$version$</version>
+        <title>Geta.EPi.ImageShop</title>
+        <authors>Mattias Olsson</authors>
+        <owners>Geta AS</owners>
+        <projectUrl>https://github.com/Geta/Geta.EPi.ImageShop</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Imageshop EPiServer integration.</description>
+        <releaseNotes></releaseNotes>
+        <copyright></copyright>
+        <tags>EPiServer, Imageshop</tags>
+        <dependencies>
+            <dependency id="EPiServer.Framework" version="7.13.2" />
+            <dependency id="EPiServer.CMS.Core" version="7.13.2" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\$configuration$\Geta.EPi.ImageShop.dll" target="lib\net45\" />
+        <file src="bin\$configuration$\Geta-EPi-ImageShop.zip" target="content\modules\_protected\geta-epi-imageshop\" />
+        <file src="web.config.transform" target="content\" />
+        <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
+        <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
+        <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\images\" />
+    </files>
+</package>

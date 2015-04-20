@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <section name="geta.epi.imageshop" type="Geta.EPi.ImageShop.Configuration.ImageShopConfigurationSection, Geta.EPi.ImageShop" />
+    </configSections>
+    <geta.epi.imageshop>
+        <settings
+            token="AddYourTokenHere"
+            interfaceName=""
+            documentPrefix=""
+            culture="nb-NO"
+            profileId=""
+            showSizeDialog="true"
+            showCropDialog="true"
+        />
+        <!-- 
+        You can add site wide size/crop presets in config if you want.
+        
+        <sizePresets>
+            <add name="Small (400x300)" width="400" height="300" />
+            <add name="Medium (640x480)" width="640" height="480" />
+        </sizePresets>
+        -->
+    </geta.epi.imageshop>
+</configuration>
