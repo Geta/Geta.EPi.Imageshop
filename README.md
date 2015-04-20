@@ -7,6 +7,8 @@ Start by installing NuGet package (use [EPiServer Nuget](http://nuget.episerver.
 
     Install-Package Geta.EPi.ImageShop
 
+## Configure access token
+
 After the package is successfully installed you need to add your access token to configuration section &lt;geta.epi.imageshop&gt; in web.config.
 
 # Basics
