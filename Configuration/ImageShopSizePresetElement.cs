@@ -1,8 +1,8 @@
 ﻿using System.Configuration;
 
-namespace Geta.EPi.ImageShop.Configuration
+namespace Geta.EPi.Imageshop.Configuration
 {
-    public class ImageShopSizePresetElement : ConfigurationElementBase
+    public class ImageshopSizePresetElement : ConfigurationElementBase
     {
         [ConfigurationProperty("name", IsKey = true, IsRequired = true)]
         public string Name

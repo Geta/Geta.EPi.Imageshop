@@ -1,6 +1,6 @@
 ﻿using EPiServer.Editor.TinyMCE;
 
-namespace Geta.EPi.ImageShop.TinyMce
+namespace Geta.EPi.Imageshop.TinyMce
 {
     [TinyMCEPluginButton(
         PlugInName = "getaepiimageshop",
@@ -9,7 +9,7 @@ namespace Geta.EPi.ImageShop.TinyMce
         LanguagePath = "/admin/tinymce/plugins/getaepiimageshop/getaepiimageshop",
         IconUrl = "images/icon.gif"
     )]
-    public class ImageShopTinyMcePlugin
+    public class ImageshopTinyMcePlugin
     {
     }
 }

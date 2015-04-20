@@ -47,7 +47,7 @@
         <ProjectDir Condition="$(ProjectDir) == ''">$(MSBuildProjectDirectory)\..\</ProjectDir>
         <NuGetExe>$(ProjectDir)\.nuget\NuGet.exe</NuGetExe>
         <TmpOutDir>$(ProjectDir)\tmp</TmpOutDir>
-        <NuspecFile>$(ProjectDir)\Geta.EPi.ImageShop.nuspec</NuspecFile>
+        <NuspecFile>$(ProjectDir)\Geta.EPi.Imageshop.nuspec</NuspecFile>
     </PropertyGroup>
 
     <Target Name="CreateNugetPackage" AfterTargets="Build">
@@ -55,7 +55,7 @@
             <Version></Version>
         </PropertyGroup>
 
-        <GetVersion AssemblyPath="$(ProjectDir)bin\$(Configuration)\Geta.EPi.ImageShop.dll">
+        <GetVersion AssemblyPath="$(ProjectDir)bin\$(Configuration)\Geta.EPi.Imageshop.dll">
             <Output TaskParameter="Version" PropertyName="Version" />
         </GetVersion>
 
@@ -65,8 +65,8 @@
         <ItemGroup>
             <ClientResources Include="$(ProjectDir)\ClientResources\**\*" />
             <TinyMcePluginResources Include="$(ProjectDir)TinyMce\ClientResources\**\*" />
-            <ModuleOutFile Include="$(OutDir)\Geta-EPi-ImageShop.zip" />
-            <ModuleBinFile Include="$(OutDir)\Geta.EPi.ImageShop.dll" />
+            <ModuleOutFile Include="$(OutDir)\Geta-EPi-Imageshop.zip" />
+            <ModuleBinFile Include="$(OutDir)\Geta.EPi.Imageshop.dll" />
         </ItemGroup>
 
         <Copy SourceFiles="$(ProjectDir)\module.config" DestinationFolder="$(TmpOutDir)\content" />
@@ -78,7 +78,7 @@
         <!-- Create the Zip file -->
         <ZipDirectory
           InputPath="$(TmpOutDir)\content"
-          OutputFileName="$(OutDir)\Geta-EPi-ImageShop.zip"
+          OutputFileName="$(OutDir)\Geta-EPi-Imageshop.zip"
           OverwriteExistingFile="true" />
 
         <!-- Create the package -->

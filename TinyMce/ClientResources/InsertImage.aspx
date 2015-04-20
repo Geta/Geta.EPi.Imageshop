@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="false" %>
 
-<%@ Import Namespace="Geta.EPi.ImageShop.Configuration" %>
+<%@ Import Namespace="Geta.EPi.Imageshop.Configuration" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,12 +60,12 @@
         }
 
         $(function () {
-            var token = "<%= ImageShopSettings.Instance.Token %>";
-            var showSizeDialog = "<%= ImageShopSettings.Instance.ShowSizeDialog.ToString().ToLowerInvariant() %>";
-            var showCropDialog = "<%= ImageShopSettings.Instance.ShowCropDialog.ToString().ToLowerInvariant() %>";
-            var interfaceName = "<%= HttpUtility.UrlEncode(ImageShopSettings.Instance.InterfaceName) %>";
-            var documentPrefix = "<%= HttpUtility.UrlEncode(ImageShopSettings.Instance.DocumentPrefix) %>";
-            var sizePresets = "<%= HttpUtility.UrlEncode(ImageShopConfigurationSection.Instance.FormattedSizePresets) %>";
+            var token = "<%= ImageshopSettings.Instance.Token %>";
+            var showSizeDialog = "<%= ImageshopSettings.Instance.ShowSizeDialog.ToString().ToLowerInvariant() %>";
+            var showCropDialog = "<%= ImageshopSettings.Instance.ShowCropDialog.ToString().ToLowerInvariant() %>";
+            var interfaceName = "<%= HttpUtility.UrlEncode(ImageshopSettings.Instance.InterfaceName) %>";
+            var documentPrefix = "<%= HttpUtility.UrlEncode(ImageshopSettings.Instance.DocumentPrefix) %>";
+            var sizePresets = "<%= HttpUtility.UrlEncode(ImageshopConfigurationSection.Instance.FormattedSizePresets) %>";
 
             var clienthost = "http://client.imageshop.no";
 

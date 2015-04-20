@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
 
-namespace Geta.EPi.ImageShop.Configuration
+namespace Geta.EPi.Imageshop.Configuration
 {
 	public class ConfigurationElementCollection<T> : ConfigurationElementCollection, IEnumerable<T> where T: ConfigurationElementBase, new()
 	{

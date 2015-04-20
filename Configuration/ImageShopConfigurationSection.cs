@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
-using System.Web;
 using System.Web.Configuration;
 
-namespace Geta.EPi.ImageShop.Configuration
+namespace Geta.EPi.Imageshop.Configuration
 {
-    public class ImageShopConfigurationSection : ConfigurationSection
+    public class ImageshopConfigurationSection : ConfigurationSection
     {
-        private static ImageShopConfigurationSection _instance;
+        private static ImageshopConfigurationSection _instance;
         private static readonly object Lock = new object();
 
-        public static ImageShopConfigurationSection Instance
+        public static ImageshopConfigurationSection Instance
         {
             get
             {
@@ -21,34 +20,34 @@ namespace Geta.EPi.ImageShop.Configuration
             }
         }
 
-        public static ImageShopConfigurationSection GetSection()
+        public static ImageshopConfigurationSection GetSection()
         {
-            var section = WebConfigurationManager.GetSection("geta.epi.imageshop") as ImageShopConfigurationSection;
+            var section = WebConfigurationManager.GetSection("Geta.EPi.Imageshop") as ImageshopConfigurationSection;
 
             if (section == null)
             {
-                throw new ConfigurationErrorsException("The <geta.epi.imageshop> configuration section could not be found in web.config.");
+                throw new ConfigurationErrorsException("The <Geta.EPi.Imageshop> configuration section could not be found in web.config.");
             }
 
             return section;
         }
 
         [ConfigurationProperty("settings", IsRequired = true)]
-        public ImageShopSettings Settings
+        public ImageshopSettings Settings
         {
             get
             {
-                return (ImageShopSettings)base["settings"];
+                return (ImageshopSettings)base["settings"];
             }
         }
 
         [ConfigurationProperty("sizePresets", IsDefaultCollection = false, IsRequired = false)]
-        [ConfigurationCollection(typeof(ConfigurationElementCollection<ImageShopSizePresetElement>), AddItemName = "add", RemoveItemName = "remove", ClearItemsName = "clear", CollectionType = ConfigurationElementCollectionType.AddRemoveClearMap)]
-        public ConfigurationElementCollection<ImageShopSizePresetElement> SizePresets
+        [ConfigurationCollection(typeof(ConfigurationElementCollection<ImageshopSizePresetElement>), AddItemName = "add", RemoveItemName = "remove", ClearItemsName = "clear", CollectionType = ConfigurationElementCollectionType.AddRemoveClearMap)]
+        public ConfigurationElementCollection<ImageshopSizePresetElement> SizePresets
         {
             get
             {
-                return (ConfigurationElementCollection<ImageShopSizePresetElement>)base["sizePresets"];
+                return (ConfigurationElementCollection<ImageshopSizePresetElement>)base["sizePresets"];
             }
             set { base["sizePresets"] = value; }
         }
@@ -64,7 +63,7 @@ namespace Geta.EPi.ImageShop.Configuration
 
                 var sizePresets = new List<string>();
 
-                foreach (ImageShopSizePresetElement sizePreset in SizePresets)
+                foreach (ImageshopSizePresetElement sizePreset in SizePresets)
                 {
                     sizePresets.Add(string.Format("{0};{1}x{2}", sizePreset.Name, sizePreset.Width, sizePreset.Height));
                 }

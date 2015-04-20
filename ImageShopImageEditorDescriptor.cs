@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Web;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
-using Geta.EPi.ImageShop.Configuration;
+using Geta.EPi.Imageshop.Configuration;
 
-namespace Geta.EPi.ImageShop
+namespace Geta.EPi.Imageshop
 {
-    [EditorDescriptorRegistration(TargetType = typeof(ImageShopImage), UIHint = ImageShopSettings.UIHint.ImageShopImage)]
-    public class ImageShopImageEditorDescriptor : EditorDescriptor
+    [EditorDescriptorRegistration(TargetType = typeof(ImageshopImage), UIHint = ImageshopSettings.UIHint.ImageshopImage)]
+    public class ImageshopImageEditorDescriptor : EditorDescriptor
     {
         private string _imageShopUrl;
 
-        public ImageShopImageEditorDescriptor()
+        public ImageshopImageEditorDescriptor()
         {
             base.ClientEditingClass = "geta-epi-imageshop.widgets.imageSelector";
         }
@@ -28,20 +27,20 @@ namespace Geta.EPi.ImageShop
 
         protected virtual string BuildDialogUrl(IEnumerable<Attribute> attributes)
         {
-            string token = ImageShopSettings.Instance.Token;
-            string baseUrl = ImageShopSettings.Instance.BaseUrl;
-            string interfaceName = ImageShopSettings.Instance.InterfaceName;
-            string documentPrefix = ImageShopSettings.Instance.DocumentPrefix;
-            string culture = ImageShopSettings.Instance.Culture;
-            string profileId = ImageShopSettings.Instance.ProfileID;
-            bool showSizeDialog = ImageShopSettings.Instance.ShowSizeDialog;
-            bool showCropDialog = ImageShopSettings.Instance.ShowCropDialog;
-            string sizePresets = ImageShopConfigurationSection.Instance.FormattedSizePresets;
+            string token = ImageshopSettings.Instance.Token;
+            string baseUrl = ImageshopSettings.Instance.BaseUrl;
+            string interfaceName = ImageshopSettings.Instance.InterfaceName;
+            string documentPrefix = ImageshopSettings.Instance.DocumentPrefix;
+            string culture = ImageshopSettings.Instance.Culture;
+            string profileId = ImageshopSettings.Instance.ProfileID;
+            bool showSizeDialog = ImageshopSettings.Instance.ShowSizeDialog;
+            bool showCropDialog = ImageshopSettings.Instance.ShowCropDialog;
+            string sizePresets = ImageshopConfigurationSection.Instance.FormattedSizePresets;
 
             _imageShopUrl = string.Format("{0}&IMAGESHOPTOKEN={1}", baseUrl, token);
 
-            ImageShopSettingsAttribute configurationAttribute = GetConfigurationAttribute(attributes);
-            IEnumerable<ImageShopSizePresetAttribute> sizePresetAttributes = GetSizePresetAttributes(attributes);
+            ImageshopSettingsAttribute configurationAttribute = GetConfigurationAttribute(attributes);
+            IEnumerable<ImageshopSizePresetAttribute> sizePresetAttributes = GetSizePresetAttributes(attributes);
 
             // Read settings from attribute.
             if (configurationAttribute != null)
@@ -118,14 +117,14 @@ namespace Geta.EPi.ImageShop
             return _imageShopUrl;
         }
 
-        protected virtual ImageShopSettingsAttribute GetConfigurationAttribute(IEnumerable<Attribute> attributes)
+        protected virtual ImageshopSettingsAttribute GetConfigurationAttribute(IEnumerable<Attribute> attributes)
         {
-            return attributes.OfType<ImageShopSettingsAttribute>().FirstOrDefault();
+            return attributes.OfType<ImageshopSettingsAttribute>().FirstOrDefault();
         }
 
-        protected virtual IEnumerable<ImageShopSizePresetAttribute> GetSizePresetAttributes(IEnumerable<Attribute> attributes)
+        protected virtual IEnumerable<ImageshopSizePresetAttribute> GetSizePresetAttributes(IEnumerable<Attribute> attributes)
         {
-            return attributes.OfType<ImageShopSizePresetAttribute>();
+            return attributes.OfType<ImageshopSizePresetAttribute>();
         }
     }
 }

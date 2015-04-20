@@ -1,19 +1,19 @@
 ﻿using System.Configuration;
 
-namespace Geta.EPi.ImageShop.Configuration
+namespace Geta.EPi.Imageshop.Configuration
 {
-    public class ImageShopSettings : ConfigurationElement
+    public class ImageshopSettings : ConfigurationElement
     {
-        private static ImageShopSettings _instance;
+        private static ImageshopSettings _instance;
         private static readonly object Lock = new object();
 
-        public static ImageShopSettings Instance
+        public static ImageshopSettings Instance
         {
             get
             {
                 lock (Lock)
                 {
-                    return _instance ?? (_instance = ImageShopConfigurationSection.Instance.Settings);
+                    return _instance ?? (_instance = ImageshopConfigurationSection.Instance.Settings);
                 }
             }
         }
@@ -124,7 +124,7 @@ namespace Geta.EPi.ImageShop.Configuration
 
         public static class UIHint
         {
-            public const string ImageShopImage = "ImageShopImage";
+            public const string ImageshopImage = "ImageshopImage";
         }
     }
 }

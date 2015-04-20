@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Geta.EPi.ImageShop
+namespace Geta.EPi.Imageshop
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
-    public class ImageShopSettingsAttribute : Attribute
+    public class ImageshopSettingsAttribute : Attribute
     {
-        public ImageShopSettingsAttribute()
+        public ImageshopSettingsAttribute()
         {
             ShowSizeDialog = true;
             ShowCropDialog = true;
@@ -21,7 +21,7 @@ namespace Geta.EPi.ImageShop
         [Description("Culture (en-US and nb-NO supported). Default is nb-NO.")]
         public string Culture { get; set; }
 
-        [Description("The id of the ImageShop profile to use.")]
+        [Description("The id of the Imageshop profile to use.")]
         public string ProfileID { get; set; }
 
         [Description("Show size dialog. Default is true.")]

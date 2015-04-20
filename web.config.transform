@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <configSections>
-        <section name="geta.epi.imageshop" type="Geta.EPi.ImageShop.Configuration.ImageShopConfigurationSection, Geta.EPi.ImageShop" />
+        <section name="Geta.EPi.Imageshop" type="Geta.EPi.Imageshop.Configuration.ImageshopConfigurationSection, Geta.EPi.Imageshop" />
     </configSections>
     <episerver.shell>
         <protectedModules>
             <add name="geta-epi-imageshop" />
         </protectedModules>
     </episerver.shell>
-    <geta.epi.imageshop>
+    <Geta.EPi.Imageshop>
         <settings
             token="AddYourTokenHere"
             interfaceName=""
@@ -26,5 +26,5 @@
             <add name="Medium (640x480)" width="640" height="480" />
         </sizePresets>
         -->
-    </geta.epi.imageshop>
+    </Geta.EPi.Imageshop>
 </configuration>

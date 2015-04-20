@@ -3,23 +3,23 @@ using EPiServer.Core;
 using EPiServer.PlugIn;
 using Newtonsoft.Json;
 
-namespace Geta.EPi.ImageShop
+namespace Geta.EPi.Imageshop
 {
-    [PropertyDefinitionTypePlugIn(DisplayName = "ImageShop Image")]
-    public class PropertyImageShopImage : PropertyData
+    [PropertyDefinitionTypePlugIn(DisplayName = "Imageshop Image")]
+    public class PropertyImageshopImage : PropertyData
     {
-        private ImageShopImage _value;
+        private ImageshopImage _value;
 
-        public PropertyImageShopImage()
+        public PropertyImageshopImage()
         {
         }
 
-        public PropertyImageShopImage(ImageShopImage image)
+        public PropertyImageshopImage(ImageshopImage image)
         {
             this.SetValue(image);
         }
 
-        protected ImageShopImage DefaultValue
+        protected ImageshopImage DefaultValue
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Geta.EPi.ImageShop
         {
             get
             {
-                return typeof(ImageShopImage);
+                return typeof(ImageshopImage);
             }
         }
 
@@ -51,16 +51,16 @@ namespace Geta.EPi.ImageShop
             }
             set
             {
-                this.SetValue((ImageShopImage)value);
+                this.SetValue((ImageshopImage)value);
             }
         }
 
-        private ImageShopImage DeserializeValue(string stringValue)
+        private ImageshopImage DeserializeValue(string stringValue)
         {
-            ImageShopImage img;
+            ImageshopImage img;
             try
             {
-                img = JsonConvert.DeserializeObject<ImageShopImage>(stringValue);
+                img = JsonConvert.DeserializeObject<ImageshopImage>(stringValue);
             }
             catch (Exception exception1)
             {
@@ -70,14 +70,14 @@ namespace Geta.EPi.ImageShop
             return img;
         }
 
-        public ImageShopImage GetValue()
+        public ImageshopImage GetValue()
         {
             return this._value;
         }
 
         public override void LoadData(object objValue)
         {
-            var image = objValue as ImageShopImage;
+            var image = objValue as ImageshopImage;
 
             if (image != null)
             {
@@ -90,7 +90,7 @@ namespace Geta.EPi.ImageShop
 
         public override PropertyData ParseToObject(string value)
         {
-            return new PropertyImageShopImage(this.DeserializeValue(value));
+            return new PropertyImageshopImage(this.DeserializeValue(value));
         }
 
         public override void ParseToSelf(string value)
@@ -103,7 +103,7 @@ namespace Geta.EPi.ImageShop
             return this.SerializeValue(this.GetValue());
         }
 
-        private string SerializeValue(ImageShopImage imageValue)
+        private string SerializeValue(ImageshopImage imageValue)
         {
             return JsonConvert.SerializeObject(imageValue);
         }
@@ -114,7 +114,7 @@ namespace Geta.EPi.ImageShop
             this._value = this.DefaultValue;
         }
 
-        public void SetValue(ImageShopImage value)
+        public void SetValue(ImageshopImage value)
         {
             this.SetPropertyValue(value, () =>
             {

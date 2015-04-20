@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Geta.EPi.ImageShop.Configuration
+namespace Geta.EPi.Imageshop.Configuration
 {
 	public abstract class ConfigurationElementBase : ConfigurationElement
 	{

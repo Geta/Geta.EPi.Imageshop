@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geta.EPi.ImageShop", "Geta.EPi.ImageShop.csproj", "{550323D0-AB89-4291-91BD-4941FE085305}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geta.EPi.Imageshop", "Geta.EPi.Imageshop.csproj", "{550323D0-AB89-4291-91BD-4941FE085305}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1F2C5C8A-5D44-4C9D-BEFC-B65D46158713}"
 	ProjectSection(SolutionItems) = preProject

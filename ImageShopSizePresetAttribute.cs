@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace Geta.EPi.ImageShop
+namespace Geta.EPi.Imageshop
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
-    public class ImageShopSizePresetAttribute : Attribute
+    public class ImageshopSizePresetAttribute : Attribute
     {
         private string _name;
 
-        public ImageShopSizePresetAttribute(int width, int height) : this(null, width, height)
+        public ImageshopSizePresetAttribute(int width, int height) : this(null, width, height)
         {
         }
 
-        public ImageShopSizePresetAttribute(string name, int width, int height)
+        public ImageshopSizePresetAttribute(string name, int width, int height)
         {
             this.Name = name;
             this.Width = width;

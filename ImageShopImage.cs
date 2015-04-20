@@ -1,6 +1,6 @@
-﻿namespace Geta.EPi.ImageShop
+﻿namespace Geta.EPi.Imageshop
 {
-    public class ImageShopImage
+    public class ImageshopImage
     {
         public virtual string Url { get; set; }
         public virtual string Title { get; set; }

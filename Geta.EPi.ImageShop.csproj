@@ -7,8 +7,8 @@
     <ProjectGuid>{550323D0-AB89-4291-91BD-4941FE085305}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Geta.EPi.ImageShop</RootNamespace>
-    <AssemblyName>Geta.EPi.ImageShop</AssemblyName>
+    <RootNamespace>Geta.EPi.Imageshop</RootNamespace>
+    <AssemblyName>Geta.EPi.Imageshop</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
@@ -186,19 +186,19 @@
   <ItemGroup>
     <Compile Include="Configuration\ConfigurationElementBase.cs" />
     <Compile Include="Configuration\ConfigurationElementCollection.cs" />
-    <Compile Include="Configuration\ImageShopSizePresetElement.cs" />
-    <Compile Include="Configuration\ImageShopSettings.cs" />
-    <Compile Include="Configuration\ImageShopConfigurationSection.cs" />
-    <Compile Include="ImageShopSettingsAttribute.cs" />
-    <Compile Include="ImageShopImageEditorDescriptor.cs" />
-    <Compile Include="ImageShopSizePresetAttribute.cs" />
-    <Compile Include="TinyMce\ImageShopTinyMcePlugin.cs" />
-    <Compile Include="PropertyImageShopImage.cs" />
-    <Compile Include="ImageShopImage.cs" />
+    <Compile Include="Configuration\ImageshopSizePresetElement.cs" />
+    <Compile Include="Configuration\ImageshopSettings.cs" />
+    <Compile Include="Configuration\ImageshopConfigurationSection.cs" />
+    <Compile Include="ImageshopSettingsAttribute.cs" />
+    <Compile Include="ImageshopImageEditorDescriptor.cs" />
+    <Compile Include="ImageshopSizePresetAttribute.cs" />
+    <Compile Include="TinyMce\ImageshopTinyMcePlugin.cs" />
+    <Compile Include="PropertyImageshopImage.cs" />
+    <Compile Include="ImageshopImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Geta.EPi.ImageShop.nuspec" />
+    <None Include="Geta.EPi.Imageshop.nuspec" />
     <None Include="module.config">
       <SubType>Designer</SubType>
     </None>
