@@ -92,10 +92,6 @@
 
         <!-- Cleanup -->
         <RemoveDir Directories="$(TmpOutDir)" />
-
-        <!-- Temporary copy command during development to simplify testing -->
-        <Copy SourceFiles="@(ModuleOutFile)" DestinationFolder="$(SolutionDir)FruktNo.Web\modules\_protected\geta-epi-imageshop" ContinueOnError="true" OverwriteReadOnlyFiles="true" />
-        <Copy SourceFiles="@(TinyMcePluginResources)" DestinationFiles="@(TinyMcePluginResources -> '$(SolutionDir)FruktNo.Web\Util\Editor\tinymce\plugins\getaepiimageshop\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true" OverwriteReadOnlyFiles="true" />
     </Target>
 
 </Project>
