@@ -36,7 +36,7 @@ Render the property in a view:
 
 # TinyMCE
 
-A TinyMCE plugin is included and can be added to your XhtmlString properties. It's located under the "media" group.
+A TinyMCE plugin is included and can be added to your XhtmlString properties. It's located in the "media" group.
 
 # Configuration
 
