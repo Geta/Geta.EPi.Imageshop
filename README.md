@@ -1,5 +1,5 @@
 # Geta.EPi.Imageshop
-Imageshop plugin for EPiServer
+[Imageshop](http://www.imageshop.org) is an online-based Digital Asset Management (DAM) software. This module integrates Imageshop in the [EPiServer](http://www.episerver.com) CMS User Interface. It contains a custom property and a TinyMCE plugin that launches the Imageshop image selection interface in a dialogue.
 
 ## How to get started
 
@@ -21,14 +21,12 @@ Add a Imageshop property to your model:
     [ImageshopSizePreset("Main image (1280x720)", 1280, 720)]
     [ImageshopSizePreset("Thumbnail image (400x300)", 400, 300)]
     public virtual ImageshopImage MainImage { get; set; }
-    
-Add a display template, ImageshopImage.cshtml:
 
-    @model Geta.EPi.Imageshop.ImageshopImage
-    @if (Model != null && !string.IsNullOrWhiteSpace(Model.Url))
-    {
-        <img src="@Model.Url" alt="@ViewData["ImageAltText"]">
-    }
+Minimal Imageshop property example:
+
+    [BackingType(typeof(PropertyImageshopImage))]
+    [UIHint(ImageshopSettings.UIHint.ImageshopImage)]
+    public virtual ImageshopImage MainImage { get; set; }
 
 Render the property in a view:
 
