@@ -18,6 +18,19 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
+        [ConfigurationProperty("baseUrl", DefaultValue = "http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true", IsRequired = false)]
+        public string BaseUrl
+        {
+            get
+            {
+                return this["baseUrl"] as string ?? "http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true";
+            }
+            set
+            {
+                this["baseUrl"] = value;
+            }
+        }
+
         [ConfigurationProperty("token", IsRequired = true)]
         public string Token
         {
@@ -31,16 +44,29 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("baseUrl", DefaultValue = "http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true", IsRequired = false)]
-        public string BaseUrl
+        [ConfigurationProperty("showSizeDialog", DefaultValue = true, IsRequired = false)]
+        public bool ShowSizeDialog
         {
             get
             {
-                return this["baseUrl"] as string ?? "http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true";
+                return (bool)this["showSizeDialog"];
             }
             set
             {
-                this["baseUrl"] = value;
+                this["showSizeDialog"] = value;
+            }
+        }
+
+        [ConfigurationProperty("showCropDialog", DefaultValue = true, IsRequired = false)]
+        public bool ShowCropDialog
+        {
+            get
+            {
+                return (bool)this["showCropDialog"];
+            }
+            set
+            {
+                this["showCropDialog"] = value;
             }
         }
 
@@ -96,29 +122,16 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("showSizeDialog", DefaultValue = true, IsRequired = false)]
-        public bool ShowSizeDialog
+        [ConfigurationProperty("webServiceUrl", DefaultValue = "http://imageshop.no/ws/v4.asmx", IsRequired = false)]
+        public string WebServiceUrl
         {
             get
             {
-                return (bool)this["showSizeDialog"];
+                return this["webServiceUrl"] as string ?? "http://imageshop.no/ws/v4.asmx";
             }
             set
             {
-                this["showSizeDialog"] = value;
-            }
-        }
-
-        [ConfigurationProperty("showCropDialog", DefaultValue = true, IsRequired = false)]
-        public bool ShowCropDialog
-        {
-            get
-            {
-                return (bool)this["showCropDialog"];
-            }
-            set
-            {
-                this["showCropDialog"] = value;
+                this["webServiceUrl"] = value;
             }
         }
 

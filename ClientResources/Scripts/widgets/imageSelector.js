@@ -3,6 +3,7 @@
         "dojo/_base/connect",
         "dojo/_base/declare",
         "dojo/_base/lang",
+        "dojo/when",
         "dojo/on",
         "dijit/focus",
 
@@ -14,6 +15,7 @@
 
         "epi/epi",
         "epi/shell/widget/_ValueRequiredMixin",
+        "epi/dependency",
         'dojo/text!./imageSelector.html',
 
         'xstyle/css!./imageSelector.css'
@@ -23,6 +25,7 @@
         connect,
         declare,
         lang,
+        when,
         on,
         focusManager,
 
@@ -34,6 +37,7 @@
 
         epi,
         _ValueRequiredMixin,
+        dependency,
         template
     ) {
 
@@ -44,6 +48,7 @@
 
             value: null,
             currentImage: null,
+            store: null,
 
             baseClass: "imageExt",
             containerId: "imageshop-frame-container",
@@ -60,6 +65,7 @@
 
             postCreate: function () {
                 this.inherited(arguments);
+                this.store = dependency.resolve('epi.storeregistry').get('imageshopstore');
             },
 
             _setValueAttr: function (value) {
@@ -126,20 +132,43 @@
             },
 
             onMessageReceived: function (event) {
-                this.setImage(event.data);
-                this._setValue(this.currentImage);
-                this.closeWindow();
+                this.setBasicImage(event.data);
+
+                when(this.store.get("?permalink=" + encodeURIComponent(this.currentImage.url)), lang.hitch(this, function (extendedData) {
+                    this.setExtendedImage(extendedData);
+                    this._setValue(this.currentImage);
+                    this.closeWindow();
+                }), lang.hitch(this, function (err) {
+                    alert("WebService call to fetch extended metadata failed. Using basic image data (url, credits, width and height). Error is: " + err);
+                    this._setValue(this.currentImage);
+                    this.closeWindow();
+                }));
             },
 
-            setImage: function (data) {
+            setBasicImage: function (data) {
                 var imageData = data.split(";");
 
                 this.currentImage = {
                     url: imageData[0],
-                    title: imageData[1],
+                    credits: imageData[1],
                     width: imageData[2],
                     height: imageData[3]
                 };
+            },
+
+            setExtendedImage: function(data) {
+                this.currentImage = this.currentImage || {};
+
+                this.currentImage.documentId = data.documentId;
+                this.currentImage.code = data.code;
+                this.currentImage.name = data.name;
+                this.currentImage.description = data.description;
+                this.currentImage.comment = data.comment;
+                this.currentImage.rights = data.rights;
+                this.currentImage.tags = data.tags;
+                this.currentImage.isImage = data.isImage;
+                this.currentImage.isVideo = data.isVideo;
+                this.currentImage.authorName = data.authorName;
             },
 
             showHideAddButton: function (value) {

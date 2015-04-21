@@ -15,14 +15,16 @@
         <dependencies>
             <dependency id="EPiServer.Framework" version="7.13.2" />
             <dependency id="EPiServer.CMS.Core" version="7.13.2" />
+            <dependency id="Microsoft.Net.Http" version="2.2.19" />
         </dependencies>
     </metadata>
     <files>
         <file src="bin\$configuration$\Geta.EPi.Imageshop.dll" target="lib\net45\" />
         <file src="bin\$configuration$\Geta-EPi-Imageshop.zip" target="content\modules\_protected\geta-epi-imageshop\" />
-        <file src="web.config.transform" target="content\" />
         <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
         <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
         <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\images\" />
+        <file src="ImageshopImage.cshtml" target="content\Views\Shared\DisplayTemplates\" />
+        <file src="web.config.transform" target="content\" />
     </files>
 </package>
