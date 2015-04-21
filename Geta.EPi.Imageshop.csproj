@@ -218,7 +218,6 @@
     <Compile Include="WebService\Responses\GetDocumentIdFromPermalinkResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Geta.EPi.Imageshop.nuspec" />
     <None Include="ImageshopImage.cshtml" />
     <None Include="module.config">
