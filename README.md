@@ -13,7 +13,7 @@ After the package is successfully installed you need to add your access token to
 
 ## Basics
 
-Add a Imageshop property to your model:
+Add a Imageshop property to your content model:
 
     [BackingType(typeof(PropertyImageshopImage))]
     [UIHint(ImageshopSettings.UIHint.ImageshopImage)]
