@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+    <!-- Thanks to Per-Magne Skuseth for this solution: https://github.com/BVNetwork/InspectInIndex/blob/master/src/msbuild/Main.proj -->
+    
     <UsingTask TaskName="ZipDirectory" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
         <ParameterGroup>
             <InputPath ParameterType="System.String" Required="true" />
