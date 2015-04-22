@@ -67,8 +67,6 @@
         <ItemGroup>
             <ClientResources Include="$(ProjectDir)\ClientResources\**\*" />
             <TinyMcePluginResources Include="$(ProjectDir)TinyMce\ClientResources\**\*" />
-            <ModuleOutFile Include="$(OutDir)\Geta-EPi-Imageshop.zip" />
-            <ModuleBinFile Include="$(OutDir)\Geta.EPi.Imageshop.dll" />
         </ItemGroup>
 
         <Copy SourceFiles="$(ProjectDir)\module.config" DestinationFolder="$(TmpOutDir)\content" />

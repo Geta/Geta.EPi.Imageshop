@@ -9,24 +9,21 @@ namespace Geta.EPi.Imageshop
     [RestStore("imageshopstore")]
     public class ImageshopStore : RestControllerBase
     {
-        private readonly string _webServiceUrl;
-        private readonly string _token;
+        private readonly WebServiceWrapper _webServiceWrapper;
 
         public ImageshopStore()
         {
-            _webServiceUrl = ImageshopSettings.Instance.WebServiceUrl;
-            _token = ImageshopSettings.Instance.Token;
+            _webServiceWrapper = new WebServiceWrapper(ImageshopSettings.Instance.WebServiceUrl, ImageshopSettings.Instance.Token);
         }
 
         [HttpGet]
         public ActionResult Get(string permalink)
         {
-            var wrapper = new WebServiceWrapper(_webServiceUrl, _token);
-            GetDocumentIdFromPermalinkResponse idResponse = wrapper.GetDocumentIdFromPermalink(permalink).Result;
+            GetDocumentIdFromPermalinkResponse idResponse = _webServiceWrapper.GetDocumentIdFromPermalink(permalink).Result;
 
             if (idResponse != null)
             {
-                GetDocumentByIdResponse documentResponse = wrapper.GetDocumentById(idResponse.DocumentID).Result;
+                GetDocumentByIdResponse documentResponse = _webServiceWrapper.GetDocumentById(idResponse.DocumentID).Result;
 
                 if (documentResponse != null)
                 {
