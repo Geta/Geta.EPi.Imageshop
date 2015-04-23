@@ -38,6 +38,15 @@ A TinyMCE plugin is included and can be added to your XhtmlString properties. It
 
 ## Configuration
 
+| Parameter      | Type       | Description                                                                      |
+| -------------- | ---------- | -------------------------------------------------------------------------------- |
+| token          | string     | Token identifying the user.                                                      |
+| interfaceName  | string     | Standard interface used when searching images.                                   |
+| documentPrefix | string     | Standard document code prefix used when uploading images.                        |
+| culture        | string     | Language for the client. Supports en-US and nb-NO. Norwegian is default (nb-NO). |
+| showSizeDialog | true/false | Indicates whether the size dialogue should be shown. Default is true.            |
+| showCropDialog | true/false | Indicates whether the crop dialogue should be show. Default is true.             |
+
 See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples.
 
 ## Screenshots
