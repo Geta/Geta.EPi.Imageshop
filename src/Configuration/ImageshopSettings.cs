@@ -138,6 +138,12 @@ namespace Geta.EPi.Imageshop.Configuration
         public static class UIHint
         {
             public const string ImageshopImage = "ImageshopImage";
+            public const string ImageshopImageCollection = "ImageshopImageCollection";
+        }
+
+        public static class TinyMCEButtons
+        {
+            public const string ImageshopImage = "getaepiimageshop";
         }
     }
 }

@@ -90,6 +90,10 @@
         </PropertyGroup>
         <Exec Command="$(NugetCommand)"/>
 
+        <!-- Copy SourceFiles="$(OutDir)Geta-EPi-Imageshop.zip" DestinationFolder="C:\Projects\GitHub\FruktNo2\FruktNo.Web\modules\_protected\geta-epi-imageshop" OverwriteReadOnlyFiles="true" ContinueOnError="false" />
+        <Copy SourceFiles="$(OutDir)Geta.EPi.Imageshop.dll" DestinationFolder="C:\Projects\GitHub\FruktNo2\FruktNo.Web\bin" OverwriteReadOnlyFiles="true" ContinueOnError="false" />
+        <Copy SourceFiles="$(OutDir)Geta.EPi.Imageshop.dll" DestinationFolder="C:\Projects\GitHub\FruktNo2\TempLib" OverwriteReadOnlyFiles="true" ContinueOnError="false" /-->
+
         <!-- Cleanup -->
         <RemoveDir Directories="$(TmpOutDir)" />
     </Target>

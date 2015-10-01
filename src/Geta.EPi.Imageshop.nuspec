@@ -25,6 +25,7 @@
         <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
         <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\images\" />
         <file src="ImageshopImage.cshtml" target="content\Views\Shared\DisplayTemplates\" />
-        <file src="web.config.transform" target="content\" />
+        <file src="web.config.install.xdt" target="content\" />
+        <file src="web.config.uninstall.xdt" target="content\" />
     </files>
 </package>

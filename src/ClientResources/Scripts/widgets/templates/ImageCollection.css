@@ -1,0 +1,70 @@
+﻿.geta-image-select {
+    border: 2px solid #b2b9c1;
+    padding: 4px;
+    display: inline-block;
+}
+
+.geta-image-add-link {
+    width: 96px;
+    height: 96px;
+    display: block;
+    cursor: pointer;
+    background: transparent url('../images/image_add.png') top left;
+}
+
+.geta-image-list {
+    margin-top: 10px;
+    background-color: #f8f9f9;
+    padding: 4px 8px;
+    border: 2px solid #b2b9c1;
+    width: 420px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 24px;
+}
+
+.geta-image-list-item {
+    display: table;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #b1bac0;
+    margin: 4px 0;
+}
+
+.geta-image-wrapper {
+    width: 75px;
+    height: auto;
+    display: table-cell;
+}
+
+.geta-image {
+    width: 100%;
+    display: block;
+}
+
+.geta-image-url {
+    display: table-cell;
+    width: 263px;
+    height: 100%;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+.geta-actions-wrapper {
+    display: table-cell;
+    width: 66px;
+    white-space: nowrap;
+}
+
+    .geta-actions-wrapper a {
+        font-size: 14px;
+    }
+
+    .geta-actions-wrapper .disabled,
+    .geta-action-wrapper .disabled:hover {
+        color: #e0e0e0 !important;
+        cursor: default;
+    }

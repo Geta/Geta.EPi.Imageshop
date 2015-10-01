@@ -3,13 +3,15 @@ using System.ComponentModel;
 
 namespace Geta.EPi.Imageshop
 {
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = false)]
     public class ImageshopSettingsAttribute : Attribute
     {
         public ImageshopSettingsAttribute()
         {
             ShowSizeDialog = true;
             ShowCropDialog = true;
+            PreviewCropName = string.Empty;
+            CropName = string.Empty;
         }
 
         [Description("Name of the default interface (if any).")]
@@ -29,5 +31,11 @@ namespace Geta.EPi.Imageshop
 
         [Description("Show crop dialog. Default is true.")]
         public bool ShowCropDialog { get; set; }
+
+        [Description("Name of the crop to use for preview when editing. Default is empty string.")]
+        public string PreviewCropName { get; set; }
+
+        [Description("Name of the crop to use for the image. Default is empty string.")]
+        public string CropName { get; set; }
     }
 }
