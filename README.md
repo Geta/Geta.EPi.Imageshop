@@ -40,6 +40,7 @@ A TinyMCE plugin is included and can be added to your XhtmlString properties. It
 
 | Parameter      | Type       | Description                                                                      |
 | -------------- | ---------- | -------------------------------------------------------------------------------- |
+| baseUrl        | string     | Base URL to imageshop client. Default is http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true |
 | token          | string     | Token identifying the user.                                                      |
 | interfaceName  | string     | Standard interface used when searching images.                                   |
 | documentPrefix | string     | Standard document code prefix used when uploading images.                        |
