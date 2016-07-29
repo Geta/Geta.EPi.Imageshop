@@ -4,8 +4,8 @@
         <id>Geta.EPi.Imageshop</id>
         <version>$version$</version>
         <title>Geta.EPi.Imageshop</title>
-        <authors>Mattias Olsson</authors>
-        <owners>Geta AS</owners>
+        <authors>Geta</authors>
+        <owners>Geta</owners>
         <projectUrl>https://github.com/Geta/Geta.EPi.Imageshop</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Imageshop EPiServer integration.</description>
