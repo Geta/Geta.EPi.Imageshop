@@ -31,6 +31,14 @@ Minimal Imageshop property example:
 Render the property in a view:
 
     @Html.PropertyFor(m => m.CurrentPage.MainImage)
+    
+Image collection:
+
+    [Display(Name = "Bilder")]
+    [BackingType(typeof(PropertyImageshopImageCollection))]
+    [UIHint(ImageshopSettings.UIHint.ImageshopImageCollection)]
+    [ImageshopSettings(ProfileID = "CAROUSEL", ShowCropDialog = false, ShowSizeDialog = false)]
+    public virtual IEnumerable<ImageshopImage> Images { get; set; }
 
 ## TinyMCE
 
