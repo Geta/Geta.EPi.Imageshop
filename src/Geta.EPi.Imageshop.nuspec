@@ -8,13 +8,13 @@
         <owners>Geta</owners>
         <projectUrl>https://github.com/Geta/Geta.EPi.Imageshop</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Imageshop EPiServer integration.</description>
+        <description>Imageshop EPiServer integration. Contains property editor for single image and multiple images as well as TinyMCE plugin. See https://github.com/Geta/Geta.EPi.Imageshop for more details.</description>
         <releaseNotes></releaseNotes>
         <copyright></copyright>
         <tags>EPiServer, Imageshop</tags>
         <dependencies>
-            <dependency id="EPiServer.Framework" version="7.13.2" />
-            <dependency id="EPiServer.CMS.Core" version="7.13.2" />
+            <dependency id="EPiServer.Framework" version="9.0.0" />
+            <dependency id="EPiServer.CMS.Core" version="9.0.0" />
             <dependency id="Microsoft.Net.Http" version="2.2.19" />
         </dependencies>
     </metadata>
