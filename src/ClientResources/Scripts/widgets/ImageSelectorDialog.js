@@ -45,7 +45,7 @@
         template
     ) {
 
-        return declare("geta-epi-imageshop.widgets.imageSelector", [_Widget, _TemplatedMixin, _WidgetsInTemplateMixin, _CssStateMixin, _ValueRequiredMixin, _HasChildDialogMixin], {
+        return declare("geta-epi-imageshop/widgets/imageSelector", [_Widget, _TemplatedMixin, _WidgetsInTemplateMixin, _CssStateMixin, _ValueRequiredMixin, _HasChildDialogMixin], {
             newWindow: null,
 
             templateString: template,

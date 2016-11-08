@@ -37,7 +37,7 @@
 
         template
     ) {
-        return declare("geta-epi-imageshop.widgets.ImageCollection", [_ImageSelector], {
+        return declare("geta-epi-imageshop/widgets/ImageCollection", [_ImageSelector], {
             //
             // Private
             //

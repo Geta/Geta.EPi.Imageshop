@@ -13,8 +13,8 @@
         <copyright></copyright>
         <tags>EPiServer, Imageshop</tags>
         <dependencies>
-            <dependency id="EPiServer.Framework" version="9.0.0" />
-            <dependency id="EPiServer.CMS.Core" version="9.0.0" />
+            <dependency id="EPiServer.Framework" version="10.0.1" />
+            <dependency id="EPiServer.CMS.Core" version="10.0.1" />
             <dependency id="Microsoft.Net.Http" version="2.2.19" />
         </dependencies>
     </metadata>

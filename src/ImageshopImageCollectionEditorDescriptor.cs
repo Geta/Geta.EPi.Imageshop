@@ -11,7 +11,7 @@ namespace Geta.EPi.Imageshop
     {
         public ImageshopImageCollectionEditorDescriptor()
         {
-            base.ClientEditingClass = "geta-epi-imageshop.widgets.ImageCollection";
+            base.ClientEditingClass = "geta-epi-imageshop/widgets/ImageCollection";
         }
 
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)

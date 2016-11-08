@@ -19,7 +19,7 @@
         template
     ) {
 
-        return declare("geta-epi-imageshop.widgets.imageSelector", [_ImageSelector], {
+        return declare("geta-epi-imageshop/widgets/imageSelector", [_ImageSelector], {
             //
             // Public
             //

@@ -7,7 +7,7 @@ namespace Geta.EPi.Imageshop
     {
         public ImageshopImageEditorDescriptor()
         {
-            base.ClientEditingClass = "geta-epi-imageshop.widgets.imageSelector";
+            base.ClientEditingClass = "geta-epi-imageshop/widgets/imageSelector";
         }
     }
 }
