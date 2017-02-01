@@ -120,3 +120,4 @@ AppData
 
 .idea
 *.css.map
+/src/.vs/config

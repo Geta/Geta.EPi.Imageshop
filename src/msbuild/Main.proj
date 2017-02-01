@@ -47,7 +47,7 @@
 
     <PropertyGroup>
         <ProjectDir Condition="$(ProjectDir) == ''">$(MSBuildProjectDirectory)\..\</ProjectDir>
-        <NuGetExe>$(ProjectDir)\.nuget\NuGet.exe</NuGetExe>
+        <NuGetExe>$(SolutionDir)\.nuget\NuGet.exe</NuGetExe>
         <TmpOutDir>$(ProjectDir)\tmp</TmpOutDir>
         <NuspecFile>$(ProjectDir)\Geta.EPi.Imageshop.nuspec</NuspecFile>
     </PropertyGroup>
@@ -89,10 +89,6 @@
 
         </PropertyGroup>
         <Exec Command="$(NugetCommand)"/>
-
-        <!-- Copy SourceFiles="$(OutDir)Geta-EPi-Imageshop.zip" DestinationFolder="C:\Projects\GitHub\FruktNo2\FruktNo.Web\modules\_protected\geta-epi-imageshop" OverwriteReadOnlyFiles="true" ContinueOnError="false" />
-        <Copy SourceFiles="$(OutDir)Geta.EPi.Imageshop.dll" DestinationFolder="C:\Projects\GitHub\FruktNo2\FruktNo.Web\bin" OverwriteReadOnlyFiles="true" ContinueOnError="false" />
-        <Copy SourceFiles="$(OutDir)Geta.EPi.Imageshop.dll" DestinationFolder="C:\Projects\GitHub\FruktNo2\TempLib" OverwriteReadOnlyFiles="true" ContinueOnError="false" /-->
 
         <!-- Cleanup -->
         <RemoveDir Directories="$(TmpOutDir)" />

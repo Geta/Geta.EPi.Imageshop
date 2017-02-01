@@ -10,7 +10,7 @@ namespace Geta.EPi.Imageshop
 
         public virtual string GetCroppedUrl(string cropName)
         {
-            if (!string.IsNullOrWhiteSpace(cropName) && Changed >= new DateTime(2015, 7, 1))
+            if (!string.IsNullOrWhiteSpace(cropName))
             {
                 return string.Format("{0}-{1}", Url, cropName);
             }
