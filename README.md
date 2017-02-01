@@ -1,9 +1,9 @@
 # Geta.EPi.Imageshop
-[Imageshop](http://www.imageshop.org) is an online-based Digital Asset Management (DAM) software. This module integrates Imageshop in the [EPiServer](http://www.episerver.com) CMS User Interface. It contains a custom property and a TinyMCE plugin that launches the Imageshop image selection interface in a dialogue.
+[Imageshop](http://www.imageshop.org) is an online-based Digital Asset Management (DAM) software. This module integrates Imageshop in the [Episerver](http://www.episerver.com) CMS User Interface. It contains a custom property and a TinyMCE plugin that launches the Imageshop image selection interface in a dialogue.
 
 ## How to get started
 
-Start by installing NuGet package (use [EPiServer Nuget](http://nuget.episerver.com))
+Start by installing NuGet package (use [Episerver Nuget](http://nuget.episerver.com))
 
     Install-Package Geta.EPi.Imageshop
 
