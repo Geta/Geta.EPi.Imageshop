@@ -50,7 +50,7 @@ Render the video property in a view:
 
 Imageshop video collection property:
 
-	[BackingType(typeof(PropertyImageshopVideo))]
+	[BackingType(typeof(PropertyImageshopVideoCollection))]
 	public virtual IEnumerable<ImageshopVideo> Videos { get; set; }
 
 ## TinyMCE
