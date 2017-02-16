@@ -13,7 +13,7 @@ After the package is successfully installed you need to add your access token to
 
 ## Basics
 
-Add a Imageshop property to your content model:
+Add an Imageshop image property to your content model:
 
     [BackingType(typeof(PropertyImageshopImage))]
     [UIHint(ImageshopSettings.UIHint.ImageshopImage)]
@@ -22,17 +22,16 @@ Add a Imageshop property to your content model:
     [ImageshopSizePreset("Thumbnail image (400x300)", 400, 300)]
     public virtual ImageshopImage MainImage { get; set; }
 
-Minimal Imageshop property example:
+Minimal Imageshop image property example:
 
     [BackingType(typeof(PropertyImageshopImage))]
-    [UIHint(ImageshopSettings.UIHint.ImageshopImage)]
     public virtual ImageshopImage MainImage { get; set; }
 
-Render the property in a view:
+Render the image property in a view:
 
     @Html.PropertyFor(m => m.CurrentPage.MainImage)
     
-Image collection:
+Image collection property:
 
     [Display(Name = "Bilder")]
     [BackingType(typeof(PropertyImageshopImageCollection))]
@@ -40,15 +39,29 @@ Image collection:
     [ImageshopSettings(ProfileID = "CAROUSEL", ShowCropDialog = false, ShowSizeDialog = false)]
     public virtual IEnumerable<ImageshopImage> Images { get; set; }
 
+Imageshop video property:
+
+	[BackingType(typeof(PropertyImageshopVideo))]
+	public virtual ImageshopVideo MainVideo { get; set; }
+
+Imageshop video collection property:
+
+	[BackingType(typeof(PropertyImageshopVideo))]
+	public virtual ImageshopVideo MainVideo { get; set; }
+
+Render the video property in a view:
+
+	@Html.PropertyFor(m => m.CurrentPage.MainVideo)
+
 ## TinyMCE
 
-A TinyMCE plugin is included and can be added to your XhtmlString properties. It's located in the "media" group.
+A TinyMCE plugin is included for browsing Imageshop images to add to your XhtmlString properties. It's located in the "media" group.
 
 ## Configuration
 
 | Parameter      | Type       | Description                                                                      |
 | -------------- | ---------- | -------------------------------------------------------------------------------- |
-| baseUrl        | string     | Base URL to imageshop client. Default is http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true |
+| baseUrl        | string     | Base URL to Imageshop client. Default is http://client.imageshop.no/InsertImage.aspx |
 | token          | string     | Token identifying the user.                                                      |
 | interfaceName  | string     | Standard interface used when searching images.                                   |
 | documentPrefix | string     | Standard document code prefix used when uploading images.                        |
