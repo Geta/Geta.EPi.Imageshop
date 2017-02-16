@@ -15,7 +15,7 @@
         "epi/dependency",
 
         "dojo/text!./templates/ImageCollection.html",
-        "xstyle/css!./templates/imageSelector.css",
+        "xstyle/css!./templates/ImageSelector.css",
         "xstyle/css!./templates/ImageCollection.css",
         "xstyle/css!//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
 ],
@@ -70,6 +70,14 @@
                 }
 
                 this.inherited(arguments);
+            },
+
+            postCreate: function() {
+                this.inherited(arguments);
+
+                if (this.isVideo) {
+                    domClass.add(this.selectImageNode, 'isVideo');
+                }
             },
 
             //

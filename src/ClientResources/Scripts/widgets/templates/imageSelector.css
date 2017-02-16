@@ -66,6 +66,10 @@
     background: transparent url('../images/image_add.png') top left;
 }
 
+.noImage.isVideo .addLink {
+    background: transparent url('../images/video_add.png') top left;
+}
+
 .imageExt.imageExtFocused {
     border: 2px solid #337cd7;
 }

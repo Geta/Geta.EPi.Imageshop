@@ -12,6 +12,10 @@
     background: transparent url('../images/image_add.png') top left;
 }
 
+.geta-image-select.isVideo .geta-image-add-link {
+    background: transparent url('../images/video_add.png') top left;
+}
+
 .geta-image-list {
     margin-top: 10px;
     background-color: #f8f9f9;

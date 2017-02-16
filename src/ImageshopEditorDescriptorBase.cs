@@ -1,17 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using EPiServer.Globalization;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 using Geta.EPi.Imageshop.Configuration;
+using Geta.EPi.Imageshop.Extensions;
 
 namespace Geta.EPi.Imageshop
 {
-    public abstract class ImageshopImageEditorDescriptorBase : EditorDescriptor
+    public abstract class ImageshopEditorDescriptorBase : EditorDescriptor
     {
-        private string _imageShopUrl;
+        protected readonly NameValueCollection ImageshopDialogQuery;
+        protected UriBuilder ImageShopDialogUrl;
+
+        protected ImageshopEditorDescriptorBase()
+        {
+            ImageshopDialogQuery = new NameValueCollection();
+        }
 
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)
         {
@@ -20,8 +30,9 @@ namespace Geta.EPi.Imageshop
             ImageshopSettingsAttribute configurationAttribute = GetConfigurationAttribute(metadata, attributes);
             IEnumerable<ImageshopSizePresetAttribute> sizePresetAttributes = GetSizePresetAttributes(metadata, attributes);
 
-            string dialogUrl = BuildDialogUrl(configurationAttribute, sizePresetAttributes);
-            metadata.EditorConfiguration.Add("baseUrl", dialogUrl);
+            UriBuilder dialogUrl = BuildDialogUrl(configurationAttribute, sizePresetAttributes);
+            metadata.EditorConfiguration.Add("baseUrl", dialogUrl.ToString());
+            metadata.EditorConfiguration.Add("preferredLanguage", MapToImageshopLanguage(ContentLanguage.PreferredCulture));
 
             if (configurationAttribute != null)
             {
@@ -30,10 +41,16 @@ namespace Geta.EPi.Imageshop
             }
         }
 
-        protected virtual string BuildDialogUrl(ImageshopSettingsAttribute configurationAttribute, IEnumerable<ImageshopSizePresetAttribute> sizePresetAttributes)
+        protected virtual string MapToImageshopLanguage(CultureInfo cultureInfo)
+        {
+            CultureInfo neutralCulture = cultureInfo.IsNeutralCulture == false ? cultureInfo.Parent : cultureInfo;
+
+            return neutralCulture.Name.ToLowerInvariant();
+        }
+
+        protected virtual NameValueCollection BuildDialogQuery(ImageshopSettingsAttribute configurationAttribute, IEnumerable<ImageshopSizePresetAttribute> sizePresetAttributes)
         {
             string token = ImageshopSettings.Instance.Token;
-            string baseUrl = ImageshopSettings.Instance.BaseUrl;
             string interfaceName = ImageshopSettings.Instance.InterfaceName;
             string documentPrefix = ImageshopSettings.Instance.DocumentPrefix;
             string culture = ImageshopSettings.Instance.Culture;
@@ -42,27 +59,30 @@ namespace Geta.EPi.Imageshop
             bool showCropDialog = ImageshopSettings.Instance.ShowCropDialog;
             string sizePresets = ImageshopConfigurationSection.Instance.FormattedSizePresets;
 
-            _imageShopUrl = string.Format("{0}&IMAGESHOPTOKEN={1}", baseUrl, token);
+            var query = HttpUtility.ParseQueryString(string.Empty);
+
+            query.Add("IFRAMEINSERT", "true");
+            query.Add("IMAGESHOPTOKEN", token);
 
             // Read settings from attribute.
             if (configurationAttribute != null)
             {
-                if (!string.IsNullOrWhiteSpace(configurationAttribute.InterfaceName))
+                if (string.IsNullOrWhiteSpace(configurationAttribute.InterfaceName) == false)
                 {
                     interfaceName = configurationAttribute.InterfaceName;
                 }
 
-                if (!string.IsNullOrWhiteSpace(configurationAttribute.DocumentPrefix))
+                if (string.IsNullOrWhiteSpace(configurationAttribute.DocumentPrefix) == false)
                 {
                     documentPrefix = configurationAttribute.DocumentPrefix;
                 }
 
-                if (!string.IsNullOrWhiteSpace(configurationAttribute.Culture))
+                if (string.IsNullOrWhiteSpace(configurationAttribute.Culture) == false)
                 {
                     culture = configurationAttribute.Culture;
                 }
 
-                if (!string.IsNullOrWhiteSpace(configurationAttribute.ProfileID))
+                if (string.IsNullOrWhiteSpace(configurationAttribute.ProfileID) == false)
                 {
                     profileId = configurationAttribute.ProfileID;
                 }
@@ -71,22 +91,11 @@ namespace Geta.EPi.Imageshop
                 showCropDialog = configurationAttribute.ShowCropDialog;
             }
 
-            _imageShopUrl += string.Format("&SHOWSIZEDIALOGUE={0}&SHOWCROPDIALOGUE={1}", showSizeDialog.ToString().ToLowerInvariant(), showCropDialog.ToString().ToLowerInvariant());
-
-            if (interfaceName != null)
-            {
-                _imageShopUrl += string.Format("&IMAGESHOPINTERFACENAME={0}", HttpUtility.UrlEncode(interfaceName));
-            }
-
-            if (documentPrefix != null)
-            {
-                _imageShopUrl += string.Format("&IMAGESHOPDOCUMENTPREFIX={0}", HttpUtility.UrlEncode(documentPrefix));
-            }
-
-            if (profileId != null)
-            {
-                _imageShopUrl += string.Format("&PROFILEID={0}", HttpUtility.UrlEncode(profileId));
-            }
+            query.Add("SHOWSIZEDIALOGUE", showSizeDialog.ToString().ToLowerInvariant());
+            query.Add("SHOWCROPDIALOGUE", showCropDialog.ToString().ToLowerInvariant());
+            query.AddIfNotNull("IMAGESHOPINTERFACENAME", interfaceName);
+            query.AddIfNotNull("IMAGESHOPDOCUMENTPREFIX", documentPrefix);
+            query.AddIfNotNull("PROFILEID", profileId);
 
             // Read and apply size preset attributes
             if (sizePresetAttributes != null)
@@ -106,17 +115,22 @@ namespace Geta.EPi.Imageshop
                 }
             }
 
-            if (!string.IsNullOrWhiteSpace(sizePresets))
-            {
-                _imageShopUrl += "&IMAGESHOPSIZES=" + HttpUtility.UrlEncode(sizePresets);
-            }
+            query.AddIfNotNull("IMAGESHOPSIZES",  sizePresets);
+            query.AddIfNotNull("CULTURE", culture);
+            query.Add("FORMAT", "json");
 
-            if (culture != null)
-            {
-                _imageShopUrl += string.Format("&CULTURE={0}", culture);
-            }
+            return query;
+        }
 
-            return _imageShopUrl;
+        protected virtual UriBuilder BuildDialogUrl(ImageshopSettingsAttribute configurationAttribute, IEnumerable<ImageshopSizePresetAttribute> sizePresetAttributes)
+        {
+            string baseUrl = ImageshopSettings.Instance.BaseUrl;
+            NameValueCollection query = BuildDialogQuery(configurationAttribute, sizePresetAttributes);
+
+            ImageShopDialogUrl = new UriBuilder(baseUrl);
+            ImageShopDialogUrl.Query = query.ToString();
+
+            return ImageShopDialogUrl;
         }
 
         protected virtual ImageshopSettingsAttribute GetConfigurationAttribute(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)

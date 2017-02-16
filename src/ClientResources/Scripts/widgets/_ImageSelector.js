@@ -11,6 +11,7 @@
         "dijit/_WidgetsInTemplateMixin",
         "dijit/_OnDijitClickMixin",
 
+        "epi/shell/request/xhr",
         "epi/shell/widget/_ValueRequiredMixin",
         "epi-cms/widget/_HasChildDialogMixin",
 
@@ -30,6 +31,7 @@
         _WidgetsInTemplateMixin,
         _OnDijitClickMixin,
 
+        xhr,
         _ValueRequiredMixin,
         _HasChildDialogMixin,
 
@@ -122,7 +124,10 @@
             onMessageReceived: function (event) {
                 this.setBasicImage(event.data);
 
-                when(this.store.get("?permalink=" + encodeURIComponent(this.currentImage.url)).then(lang.hitch(this, function (extendedData) {
+                xhr.get(this.store.target + '?permalink=' + encodeURIComponent(this.currentImage.url), {
+                    handleAs: 'json'
+                }).then(lang.hitch(this, function (extendedData) {
+                    window.console && console.log('extendeddata', extendedData);
                     this.setExtendedImage(extendedData);
                     this.onImageSelected(this.currentImage);
                     this.closeWindow();
@@ -130,7 +135,7 @@
                     alert("WebService call to fetch extended metadata failed. Using basic image data (url, credits, width and height). Error is: " + err);
                     this.onImageSelected(this.currentImage);
                     this.closeWindow();
-                })));
+                }));
             },
 
             openWindow: function (evt) {
@@ -139,37 +144,49 @@
                 this.messageReceivedCallback = lang.hitch(this, this.onMessageReceived);
 
                 if (window.addEventListener) {
-                    addEventListener("message", this.messageReceivedCallback, false);
+                    window.addEventListener("message", this.messageReceivedCallback, false);
                 } else {
-                    attachEvent("onmessage", this.messageReceivedCallback);
+                    window.attachEvent("onmessage", this.messageReceivedCallback);
                 }
 
                 this.createFrame();
             },
 
             setBasicImage: function (data) {
-                var imageData = data.split(";");
+                var imageData = JSON.parse(data.split(";")[0]);
+                var textData = imageData.text[this.preferredLanguage];
+                window.console && console.log(imageData);
 
                 this.currentImage = {
-                    url: imageData[0],
-                    credits: imageData[1],
-                    width: imageData[2],
-                    height: imageData[3],
+                    code: imageData.code,
+                    url: imageData.image.file,
+                    width: imageData.image.width,
+                    height: imageData.image.height,
                     changed: new Date(),
                     cropName: this.cropName
                 };
+
+                if (textData) {
+                    this.currentImage.name = textData.title;
+                    this.currentImage.credits = textData.credits;
+                    this.currentImage.description = textData.description;
+                    this.currentImage.rights = textData.rights;
+                    this.currentImage.tags = textData.tags;
+                }
+
+                if (imageData.videos) {
+                    this.currentImage.aspectRatio = imageData.aspectratio;
+                    this.currentImage.videos = imageData.videos;
+                }
+
+                window.console && console.log(this.currentImage);
             },
 
             setExtendedImage: function (data) {
                 this.currentImage = this.currentImage || {};
 
-                this.currentImage.documentId = data.documentId;
-                this.currentImage.code = data.code;
-                this.currentImage.name = data.name;
-                this.currentImage.description = data.description;
+                this.currentImage.documentId = data.documentID;
                 this.currentImage.comment = data.comment;
-                this.currentImage.rights = data.rights;
-                this.currentImage.tags = data.tags;
                 this.currentImage.isImage = data.isImage;
                 this.currentImage.isVideo = data.isVideo;
                 this.currentImage.authorName = data.authorName;
