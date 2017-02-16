@@ -47,7 +47,7 @@ Imageshop video property:
 Imageshop video collection property:
 
 	[BackingType(typeof(PropertyImageshopVideo))]
-	public virtual ImageshopVideo MainVideo { get; set; }
+	public virtual IEnumerable<ImageshopVideo> Videos { get; set; }
 
 Render the video property in a view:
 
