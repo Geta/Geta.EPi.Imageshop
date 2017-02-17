@@ -6,7 +6,7 @@
     return;
 }
 
-<div id="video-@Model.Code" data-jwplayer='{ "title": "@Model.Name", "description": "@Model.Description", "thumb": "@Model.Url", "mediaid": "@Model.Code", "videos": @Model.GetVideosJson() }'></div>
+<div id="video-@Model.GetUrlFriendlyCode()" data-jwplayer='{ "title": "@Model.Name", "description": "@Model.Description", "thumb": "@Model.Url", "mediaid": "@Model.Code", "videos": @Model.GetVideosJson() }'></div>
 
 <script>
     // Embed the script if not loaded already. This is better placed

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EPiServer.Framework.Serialization;
 using EPiServer.ServiceLocation;
+using EPiServer.Web;
 
 namespace Geta.EPi.Imageshop.Extensions
 {
@@ -44,6 +45,11 @@ namespace Geta.EPi.Imageshop.Extensions
             }
 
             return Enumerable.Empty<ImageshopVideoData>();
+        }
+
+        public static string GetUrlFriendlyCode(this ImageshopVideo video)
+        {
+            return ServiceLocator.Current.GetInstance<IUrlSegmentGenerator>().Create(video.Code);
         }
     }
 }
