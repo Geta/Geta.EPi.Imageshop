@@ -45,7 +45,12 @@ namespace Geta.EPi.Imageshop
 
         protected virtual string MapToImageshopLanguage(CultureInfo cultureInfo)
         {
-            CultureInfo neutralCulture = cultureInfo.IsNeutralCulture == false ? cultureInfo.Parent : cultureInfo;
+            CultureInfo neutralCulture = cultureInfo;
+
+            while (Equals(neutralCulture.Parent, CultureInfo.InvariantCulture) == false)
+            {
+                neutralCulture = neutralCulture.Parent;
+            }
 
             return neutralCulture.Name.ToLowerInvariant();
         }
