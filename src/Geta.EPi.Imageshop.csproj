@@ -189,11 +189,13 @@
     <Compile Include="Configuration\ImageshopSizePresetElement.cs" />
     <Compile Include="Configuration\ImageshopSettings.cs" />
     <Compile Include="Configuration\ImageshopConfigurationSection.cs" />
+    <Compile Include="DefaulImageshopDialogUrlBuilder.cs" />
     <Compile Include="Extensions\HttpClientExtensions.cs" />
     <Compile Include="Extensions\HttpRequestMessageExtensions.cs" />
     <Compile Include="Extensions\ImageshopVideoExtensions.cs" />
     <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="IImageshopDialogUrlBuilder.cs" />
     <Compile Include="ImageshopFile.cs" />
     <Compile Include="ImageshopVideoCollectionEditorDescriptor.cs" />
     <Compile Include="ImageshopImageCollectionEditorDescriptor.cs" />

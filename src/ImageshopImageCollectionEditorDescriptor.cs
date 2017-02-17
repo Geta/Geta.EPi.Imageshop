@@ -17,7 +17,6 @@ namespace Geta.EPi.Imageshop
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)
         {
             base.ModifyMetadata(metadata, attributes);
-            metadata.EditorConfiguration.Add("isVideo", false);
             metadata.CustomEditorSettings["uiType"] = metadata.ClientEditingClass;
             metadata.CustomEditorSettings["uiWrapperType"] = UiWrapperType.Flyout;
             metadata.EditorConfiguration["uiWrapperType"] = UiWrapperType.Flyout;
