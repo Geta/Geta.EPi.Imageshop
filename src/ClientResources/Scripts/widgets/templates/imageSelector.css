@@ -5,7 +5,7 @@
     padding: 1px;
     position: relative;
     cursor: pointer;
-    display: table;
+    display: inline-block;
 }
 
     .imageExt .noImage {

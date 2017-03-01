@@ -1,19 +1,21 @@
 ﻿.geta-image-select {
-    border: 2px solid #b2b9c1;
+    border: 2px dashed #b2b9c1;
     padding: 4px;
     display: inline-block;
 }
 
 .geta-image-add-link {
-    width: 96px;
-    height: 96px;
+    width: 100px;
+    height: 100px;
     display: block;
     cursor: pointer;
-    background: transparent url('../images/image_add.png') top left;
+    background: transparent url('../images/image_add.png') center center no-repeat;
+    background-size: 96px;
 }
 
 .geta-image-select.isVideo .geta-image-add-link {
-    background: transparent url('../images/video_add.png') top left;
+    background: transparent url('../images/video_add.png') center center no-repeat;
+    background-size: 96px;
 }
 
 .geta-image-list {

@@ -48,7 +48,6 @@
             // Public
             //
 
-            baseClass: "imageExt",
             multiple: true,
             previewCropName: null,
             selectCurrentImage: false,
