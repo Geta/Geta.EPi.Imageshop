@@ -17,13 +17,23 @@ namespace Geta.EPi.Imageshop
         {
             get
             {
-                var value = LongString;
+                try
+                {
+                    var value = LongString;
 
-                if (string.IsNullOrWhiteSpace(value)) return null;
+                    if (string.IsNullOrWhiteSpace(value))
+                    {
+                        return null;
+                    }
 
-                _value = JsonConvert.DeserializeObject<T>(value);
+                    _value = JsonConvert.DeserializeObject<T>(value);
 
-                return _value;
+                    return _value;
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
             }
             set
             {
