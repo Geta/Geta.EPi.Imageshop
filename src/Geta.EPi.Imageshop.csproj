@@ -221,6 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="EPiServerLog.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Geta.EPi.Imageshop.nuspec" />
     <None Include="ImageshopVideo.cshtml" />
     <None Include="ImageshopImage.cshtml" />
