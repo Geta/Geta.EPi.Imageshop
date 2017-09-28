@@ -3,11 +3,11 @@
 namespace Geta.EPi.Imageshop
 {
     [EditorDescriptorRegistration(TargetType = typeof(ImageshopImage))]
-    public class ImageshopImageEditorDescriptor : ImageshopImageEditorDescriptorBase
+    public class ImageshopImageEditorDescriptor : ImageshopEditorDescriptorBase
     {
         public ImageshopImageEditorDescriptor()
         {
-            base.ClientEditingClass = "geta-epi-imageshop/widgets/imageSelector";
+            base.ClientEditingClass = "geta-epi-imageshop/widgets/ImageSelector";
         }
     }
 }

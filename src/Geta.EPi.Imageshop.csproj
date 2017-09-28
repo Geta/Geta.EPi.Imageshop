@@ -189,16 +189,26 @@
     <Compile Include="Configuration\ImageshopSizePresetElement.cs" />
     <Compile Include="Configuration\ImageshopSettings.cs" />
     <Compile Include="Configuration\ImageshopConfigurationSection.cs" />
+    <Compile Include="DefaulImageshopDialogUrlBuilder.cs" />
     <Compile Include="Extensions\HttpClientExtensions.cs" />
     <Compile Include="Extensions\HttpRequestMessageExtensions.cs" />
+    <Compile Include="Extensions\ImageshopVideoExtensions.cs" />
+    <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="IImageshopDialogUrlBuilder.cs" />
     <Compile Include="ImageshopFile.cs" />
+    <Compile Include="ImageshopVideoCollectionEditorDescriptor.cs" />
     <Compile Include="ImageshopImageCollectionEditorDescriptor.cs" />
-    <Compile Include="ImageshopImageEditorDescriptorBase.cs" />
+    <Compile Include="ImageshopEditorDescriptorBase.cs" />
+    <Compile Include="ImageshopVideoData.cs" />
+    <Compile Include="ImageshopVideoEditorDescriptor.cs" />
     <Compile Include="ImageshopSettingsAttribute.cs" />
     <Compile Include="ImageshopImageEditorDescriptor.cs" />
     <Compile Include="ImageshopSizePresetAttribute.cs" />
     <Compile Include="ImageshopStore.cs" />
+    <Compile Include="ImageshopVideo.cs" />
+    <Compile Include="PropertyImageshopVideoCollection.cs" />
+    <Compile Include="PropertyImageshopVideo.cs" />
     <Compile Include="PropertyImageshopImageCollection.cs" />
     <Compile Include="PropertyJsonSerializedObject.cs" />
     <Compile Include="TinyMce\ImageshopTinyMcePlugin.cs" />
@@ -212,6 +222,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Geta.EPi.Imageshop.nuspec" />
+    <None Include="ImageshopVideo.cshtml" />
     <None Include="ImageshopImage.cshtml" />
     <None Include="module.config">
       <SubType>Designer</SubType>
@@ -226,16 +237,20 @@
   <ItemGroup>
     <Content Include="ClientResources\Scripts\ImageshopInitializer.js" />
     <Content Include="ClientResources\Scripts\widgets\ImageCollection.js" />
-    <Content Include="ClientResources\Scripts\widgets\ImageSelectorDialog.js" />
+    <Content Include="ClientResources\Scripts\widgets\images\video_add.png" />
     <Content Include="ClientResources\Scripts\widgets\templates\ImageCollection.html" />
     <Content Include="ClientResources\Scripts\widgets\templates\ImageCollection.css" />
-    <Content Include="ClientResources\Scripts\widgets\templates\imageSelector.css" />
-    <Content Include="ClientResources\Scripts\widgets\templates\imageSelector.html" />
-    <Content Include="ClientResources\Scripts\widgets\imageSelector.js" />
+    <Content Include="ClientResources\Scripts\widgets\templates\ImageSelector.css" />
+    <Content Include="ClientResources\Scripts\widgets\templates\ImageSelector.html" />
+    <Content Include="ClientResources\Scripts\widgets\ImageSelector.js" />
     <Content Include="ClientResources\Scripts\widgets\images\close-icon.png" />
     <Content Include="ClientResources\Scripts\widgets\images\delete.png" />
     <Content Include="ClientResources\Scripts\widgets\images\image_add.png" />
     <Content Include="ClientResources\Scripts\widgets\_ImageSelector.js" />
+    <Content Include="scripts\jwplayer.flash.swf" />
+    <Content Include="scripts\jwplayer.html5.js" />
+    <Content Include="scripts\jwplayer.imageshop.js" />
+    <Content Include="scripts\jwplayer.js" />
     <Content Include="TinyMce\ClientResources\editor_plugin.js" />
     <Content Include="TinyMce\ClientResources\images\icon.gif" />
     <Content Include="TinyMce\ClientResources\InsertImage.aspx" />

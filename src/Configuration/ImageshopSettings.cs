@@ -18,7 +18,7 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("baseUrl", DefaultValue = "http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true", IsRequired = false)]
+        [ConfigurationProperty("baseUrl", DefaultValue = "http://client.imageshop.no/InsertImage.aspx", IsRequired = false)]
         public string BaseUrl
         {
             get
@@ -139,6 +139,8 @@ namespace Geta.EPi.Imageshop.Configuration
         {
             public const string ImageshopImage = "ImageshopImage";
             public const string ImageshopImageCollection = "ImageshopImageCollection";
+            public const string ImageshopVideo = "ImageshopVideo";
+            public const string ImageshopVideoCollection = "ImageshopVideoCollection";
         }
 
         public static class TinyMCEButtons

@@ -1,17 +1,19 @@
 ﻿define([
         "dojo/_base/declare",
         "dojo/_base/lang",
+        "dojo/dom-class",
 
         "geta-epi-imageshop/widgets/_ImageSelector",
 
         "epi/epi",
-        'dojo/text!./templates/imageSelector.html',
+        'dojo/text!./templates/ImageSelector.html',
 
-        'xstyle/css!./templates/imageSelector.css'
+        'xstyle/css!./templates/ImageSelector.css'
 ],
     function (
         declare,
         lang,
+        domClass,
 
         _ImageSelector,
 
@@ -19,7 +21,7 @@
         template
     ) {
 
-        return declare("geta-epi-imageshop/widgets/imageSelector", [_ImageSelector], {
+        return declare("geta-epi-imageshop/widgets/ImageSelector", [_ImageSelector], {
             //
             // Public
             //
@@ -36,6 +38,14 @@
             postCreate: function () {
                 this.inherited(arguments);
                 this.showHideAddButton(this.value);
+
+                if (this.isVideo) {
+                    domClass.add(this.noImageNode, 'isVideo');
+                }
+            },
+
+            postMixInProperties: function () {
+                this.inherited(arguments);
             },
 
             //

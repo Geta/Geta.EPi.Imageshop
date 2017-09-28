@@ -1,0 +1,26 @@
+﻿@using Geta.EPi.Imageshop.Extensions
+@model Geta.EPi.Imageshop.ImageshopVideo
+
+@if (Model == null)
+{
+    return;
+}
+
+<div id="video-@Model.GetUrlFriendlyCode()" data-jwplayer='{ "title": "@Model.Name", "description": "@Model.Description", "thumb": "@Model.Url", "mediaid": "@Model.Code", "videos": @Model.GetVideosJson() }'></div>
+
+<script>
+    // Embed the script if not loaded already. This is better placed
+    // in your layout file or as part of your script framework.
+
+    (function (d) {
+        if (d.getElementById('jwplayer-imageshop-script')) {
+            return;
+        }
+
+        var s = d.createElement('script');
+        s.id = 'jwplayer-imageshop-script';
+        s.async = true;
+        s.src = '/scripts/jwplayer.imageshop.js';
+        d.body.appendChild(s);
+    })(document);
+</script>

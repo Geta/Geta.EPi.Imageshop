@@ -5,7 +5,7 @@
     padding: 1px;
     position: relative;
     cursor: pointer;
-    display: table;
+    display: inline-block;
 }
 
     .imageExt .noImage {
@@ -64,6 +64,10 @@
     top: 6px;
     cursor: pointer;
     background: transparent url('../images/image_add.png') top left;
+}
+
+.noImage.isVideo .addLink {
+    background: transparent url('../images/video_add.png') top left;
 }
 
 .imageExt.imageExtFocused {
