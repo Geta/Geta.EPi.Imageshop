@@ -6,10 +6,12 @@ using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 
 namespace Geta.EPi.Imageshop
 {
-    [EditorDescriptorRegistration(TargetType = typeof(IEnumerable<ImageshopImage>))]
-    public class ImageshopImageCollectionEditorDescriptor : ImageshopEditorDescriptorBase
+    [EditorDescriptorRegistration(TargetType = typeof(IEnumerable<ImageshopVideo>))]
+    public class ImageshopVideoCollectionEditorDescriptor : ImageshopEditorDescriptorBase
     {
-        public ImageshopImageCollectionEditorDescriptor()
+        protected override bool IsVideoDescriptor { get { return true; } }
+
+        public ImageshopVideoCollectionEditorDescriptor()
         {
             base.ClientEditingClass = "geta-epi-imageshop/widgets/ImageCollection";
         }

@@ -8,10 +8,10 @@
         <owners>Geta</owners>
         <projectUrl>https://github.com/Geta/Geta.EPi.Imageshop</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Imageshop EPiServer integration. Contains property editor for single image and multiple images as well as TinyMCE plugin. See https://github.com/Geta/Geta.EPi.Imageshop for more details.</description>
+        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/Geta/Geta.EPi.Imageshop for more details.</description>
         <releaseNotes></releaseNotes>
         <copyright></copyright>
-        <tags>EPiServer, Imageshop</tags>
+        <tags>Episerver, Imageshop</tags>
         <dependencies>
             <dependency id="EPiServer.Framework" version="10.0.1" />
             <dependency id="EPiServer.CMS.Core" version="10.0.1" />
@@ -25,6 +25,11 @@
         <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
         <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\images\" />
         <file src="ImageshopImage.cshtml" target="content\Views\Shared\DisplayTemplates\" />
+        <file src="ImageshopVideo.cshtml" target="content\Views\Shared\DisplayTemplates\" />
+        <file src="scripts\jwplayer.flash.swf" target="content\scripts\" />
+        <file src="scripts\jwplayer.html5.js" target="content\scripts\" />
+        <file src="scripts\jwplayer.js" target="content\scripts\" />
+        <file src="scripts\jwplayer.imageshop.js" target="content\scripts\" />
         <file src="web.config.install.xdt" target="content\" />
         <file src="web.config.uninstall.xdt" target="content\" />
     </files>

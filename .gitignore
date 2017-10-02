@@ -118,6 +118,7 @@ node_modules
 
 AppData
 
+.vs/
 .idea
 *.css.map
 /src/.vs/config

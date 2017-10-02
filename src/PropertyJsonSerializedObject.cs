@@ -1,5 +1,6 @@
 ﻿using System;
 using EPiServer.Core;
+using EPiServer.Logging;
 using Newtonsoft.Json;
 
 namespace Geta.EPi.Imageshop
@@ -7,23 +8,33 @@ namespace Geta.EPi.Imageshop
     public abstract class PropertyJsonSerializedObject<T> : PropertyLongString where T : class
     {
         protected T _value;
+        private readonly ILogger _log = LogManager.GetLogger(typeof(PropertyJsonSerializedObject<T>));
 
-        public override Type PropertyValueType
-        {
-            get { return typeof(T); }
-        }
+        public override Type PropertyValueType => typeof(T);
 
         public override object Value
         {
             get
             {
-                var value = LongString;
+                try
+                {
+                    var value = LongString;
 
-                if (string.IsNullOrWhiteSpace(value)) return null;
+                    if (string.IsNullOrWhiteSpace(value))
+                    {
+                        return null;
+                    }
 
-                _value = JsonConvert.DeserializeObject<T>(value);
+                    _value = JsonConvert.DeserializeObject<T>(value);
 
-                return _value;
+                    return _value;
+                }
+                catch (Exception ex)
+                {
+                    _log.Error("There was exception whilst deserialising object", ex);
+
+                    return null;
+                }
             }
             set
             {
@@ -38,11 +49,6 @@ namespace Geta.EPi.Imageshop
             }
         }
 
-        public override void LoadData(object value)
-        {
-            base.LoadData(value);
-        }
-
         public override object SaveData(PropertyDataCollection properties)
         {
             return LongString;
@@ -50,7 +56,7 @@ namespace Geta.EPi.Imageshop
 
         public override IPropertyControl CreatePropertyControl()
         {
-            //No support for legacy edit mode
+            // No support for legacy edit mode
             return null;
         }
     }
