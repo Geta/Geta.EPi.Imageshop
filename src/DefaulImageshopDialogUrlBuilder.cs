@@ -17,9 +17,21 @@ namespace Geta.EPi.Imageshop
             NameValueCollection query = BuildDialogQuery(configurationAttribute, sizePresetAttributes, addVideoParameter);
 
             var uri = new UriBuilder(baseUrl);
-            uri.Query = query.ToString();
+            uri.Query = ConstructQueryString(query);
 
             return uri;
+        }
+
+        public string ConstructQueryString(NameValueCollection parameters)
+        {
+            var items = new List<string>();
+
+            foreach (string name in parameters)
+            {
+                items.Add(string.Concat(name, "=", HttpUtility.UrlEncode(parameters[name])));
+            }
+
+            return string.Join("&", items.ToArray());
         }
 
         public virtual NameValueCollection BuildDialogQuery(ImageshopSettingsAttribute configurationAttribute, IEnumerable<ImageshopSizePresetAttribute> sizePresetAttributes, bool addVideoParameter)
