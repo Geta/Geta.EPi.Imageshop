@@ -235,9 +235,6 @@
     <None Include="module.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="modules\_protected\CMS\CMS.zip" />
-    <None Include="modules\_protected\EPiServer.Cms.TinyMce\EPiServer.Cms.TinyMce.zip" />
-    <None Include="modules\_protected\Shell\Shell.zip" />
     <None Include="msbuild\Main.proj">
       <SubType>Designer</SubType>
     </None>
