@@ -13,13 +13,14 @@
         <copyright></copyright>
         <tags>Episerver, Imageshop</tags>
         <dependencies>
-            <dependency id="EPiServer.Framework" version="10.0.1" />
-            <dependency id="EPiServer.CMS.Core" version="10.0.1" />
-            <dependency id="Microsoft.Net.Http" version="2.2.19" />
+          <dependency id="EPiServer.Framework" version="11.3.3" />
+          <dependency id="EPiServer.CMS.Core" version="11.3.3" />
+          <dependency id="EPiServer.CMS.TinyMce" version="1.0.0" />
+          <dependency id="Microsoft.Net.Http" version="2.2.19" />
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\$configuration$\Geta.EPi.Imageshop.dll" target="lib\net45\" />
+        <file src="bin\$configuration$\Geta.EPi.Imageshop.dll" target="lib\net461\" />
         <file src="bin\$configuration$\Geta-EPi-Imageshop.zip" target="content\modules\_protected\geta-epi-imageshop\" />
         <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
         <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
