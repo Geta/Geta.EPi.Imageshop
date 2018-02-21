@@ -53,11 +53,5 @@ namespace Geta.EPi.Imageshop
         {
             return LongString;
         }
-
-        public override IPropertyControl CreatePropertyControl()
-        {
-            // No support for legacy edit mode
-            return null;
-        }
     }
 }
