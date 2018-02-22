@@ -9,7 +9,7 @@ namespace Geta.EPi.Imageshop.Extensions
         {
             if (string.IsNullOrEmpty(value) == false)
             {
-                nvc.Add(name, HttpUtility.UrlEncode(value));
+                nvc.Add(name, value);
             }
         }
     }
