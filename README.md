@@ -1,4 +1,9 @@
 # Geta.EPi.Imageshop
+
+![](http://tc.geta.no/app/rest/builds/buildType:(id:TeamFrederik_EpiImageshop_Debug)/statusIcon)
+[![Platform](https://img.shields.io/badge/Platform-.NET%204.6.1-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
+[![Platform](https://img.shields.io/badge/Episerver-%2011-orange.svg?style=flat)](http://world.episerver.com/cms/)
+
 [Imageshop](http://www.imageshop.org) is an online-based Digital Asset Management (DAM) software. This module integrates Imageshop in the [Episerver](http://www.episerver.com) CMS User Interface. It contains a custom property and a TinyMCE plugin that launches the Imageshop image selection interface in a dialogue.
 
 ## How to get started
@@ -79,3 +84,6 @@ See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples.
 ![ScreenShot](/docs/imageshop-selection.jpg)
 
 ![ScreenShot](/docs/tinymce-plugin.jpg)
+
+## Changelog
+2.1. Support for Episerver 11
