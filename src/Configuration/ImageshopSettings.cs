@@ -18,12 +18,12 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("baseUrl", DefaultValue = "http://client.imageshop.no/InsertImage.aspx", IsRequired = false)]
+        [ConfigurationProperty("baseUrl", DefaultValue = "https://client.imageshop.no/InsertImage.aspx", IsRequired = false)]
         public string BaseUrl
         {
             get
             {
-                return this["baseUrl"] as string ?? "http://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true";
+                return this["baseUrl"] as string ?? "https://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true";
             }
             set
             {
