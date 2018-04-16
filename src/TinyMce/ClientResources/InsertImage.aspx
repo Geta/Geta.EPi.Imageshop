@@ -67,7 +67,7 @@
             var documentPrefix = "<%= HttpUtility.UrlEncode(ImageshopSettings.Instance.DocumentPrefix) %>";
             var sizePresets = "<%= HttpUtility.UrlEncode(ImageshopConfigurationSection.Instance.FormattedSizePresets) %>";
 
-            var clienthost = "http://client.imageshop.no";
+            var clienthost = "https://client.imageshop.no";
 
             var loc = window.location.toString(),
                 params = loc.split('?')[1],
