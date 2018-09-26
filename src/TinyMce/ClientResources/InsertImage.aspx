@@ -9,7 +9,7 @@
 
     <title>Imageshop</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="../../tiny_mce_popup.js"></script>
+    <script src="https://client.imageshop.no/scripts/tiny_mce_popup.js"></script>
 
     <style type="text/css">
         iframe {
