@@ -134,6 +134,18 @@ namespace Geta.EPi.Imageshop.Configuration
                 this["webServiceUrl"] = value;
             }
         }
+        [ConfigurationProperty("initializeTinyMCEPlugin", DefaultValue = true, IsRequired = false)]
+        public bool InitializeTinyMCEPlugin
+        {
+            get
+            {
+                return (bool)this["initializeTinyMCEPlugin"];
+            }
+            set
+            {
+                this["initializeTinyMCEPlugin"] = value;
+            }
+        }
 
         public static class UIHint
         {

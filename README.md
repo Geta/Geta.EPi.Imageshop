@@ -65,15 +65,16 @@ A TinyMCE plugin is included for browsing Imageshop images to add to your XhtmlS
 
 ## Configuration
 
-| Parameter      | Type       | Description                                                                      |
-| -------------- | ---------- | -------------------------------------------------------------------------------- |
-| baseUrl        | string     | Base URL to Imageshop client. Default is http://client.imageshop.no/InsertImage.aspx |
-| token          | string     | Token identifying the user.                                                      |
-| interfaceName  | string     | Standard interface used when searching images.                                   |
-| documentPrefix | string     | Standard document code prefix used when uploading images.                        |
-| culture        | string     | Language for the client. Supports en-US and nb-NO. Norwegian is default (nb-NO). |
-| showSizeDialog | true/false | Indicates whether the size dialogue should be shown. Default is true.            |
-| showCropDialog | true/false | Indicates whether the crop dialogue should be show. Default is true.             |
+| Parameter		      		| Type       | Description                                                                      	|
+| ------------------------- | ---------- | ------------------------------------------------------------------------------------ |
+| baseUrl        			| string     | Base URL to Imageshop client. Default is http://client.imageshop.no/InsertImage.aspx |
+| token          			| string     | Token identifying the user.                                                      	|
+| interfaceName  			| string     | Standard interface used when searching images.                                  		|
+| documentPrefix 			| string     | Standard document code prefix used when uploading images.                        	|
+| culture        			| string     | Language for the client. Supports en-US and nb-NO. Norwegian is default (nb-NO). 	|
+| showSizeDialog 			| true/false | Indicates whether the size dialogue should be shown. Default is true.            	|
+| showCropDialog		 	| true/false | Indicates whether the crop dialogue should be show. Default is true.             	|
+| initializeTinyMCEPlugin	| true/false | Version 1.7.0, enables plug in for TinyMCE v > 2.0						            |
 
 See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples.
 
@@ -87,3 +88,4 @@ See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples.
 
 ## Changelog
 2.1. Support for Episerver 11
+2.2. Version 1.7.0 Support for TinyMCE > 2.0. Added new configuration parameter for TinyMCE plugin initialization.
