@@ -15,7 +15,7 @@
         <dependencies>
           <dependency id="EPiServer.Framework" version="[11.1.0,12.0]" />
           <dependency id="EPiServer.CMS.Core" version="[11.1.0,12.0]" />
-          <dependency id="EPiServer.CMS.TinyMce" version="1.0.0" />
+          <dependency id="EPiServer.CMS.TinyMce" version="2.0.0" />
           <dependency id="Microsoft.Net.Http" version="2.2.19" />
         </dependencies>
     </metadata>
