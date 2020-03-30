@@ -1,22 +1,22 @@
 ﻿define([
-        "dojo/_base/array",
-        "dojo/_base/connect",
-        "dojo/_base/declare",
-        "dojo/_base/lang",
-        "dojo/when",
-        "dojo/on",
+    "dojo/_base/array",
+    "dojo/_base/connect",
+    "dojo/_base/declare",
+    "dojo/_base/lang",
+    "dojo/when",
+    "dojo/on",
 
-        "dijit/_WidgetBase",
-        "dijit/_TemplatedMixin",
-        "dijit/_WidgetsInTemplateMixin",
-        "dijit/_OnDijitClickMixin",
+    "dijit/_WidgetBase",
+    "dijit/_TemplatedMixin",
+    "dijit/_WidgetsInTemplateMixin",
+    "dijit/_OnDijitClickMixin",
 
-        "epi/shell/request/xhr",
-        "epi/shell/widget/_ValueRequiredMixin",
-        "epi-cms/widget/_HasChildDialogMixin",
+    "epi/shell/request/xhr",
+    "epi/shell/widget/_ValueRequiredMixin",
+    "epi-cms/widget/_HasChildDialogMixin",
 
-        "epi/epi",
-        "epi/dependency"
+    "epi/epi",
+    "epi/dependency"
 ],
     function (
         array,
@@ -190,6 +190,7 @@
                 this.currentImage.isImage = data.isImage;
                 this.currentImage.isVideo = data.isVideo;
                 this.currentImage.authorName = data.authorName;
+                this.currentImage.description = data.description;
             }
         });
     });

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using EPiServer.Cms.TinyMce.Core;
+﻿using EPiServer.Cms.TinyMce.Core;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
