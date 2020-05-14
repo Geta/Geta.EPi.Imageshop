@@ -17,6 +17,7 @@
             profileId=""
             showSizeDialog="true"
             showCropDialog="true"
+            freeCrop="true"
             initializeTinyMCEPlugin="true"
         />
     </Geta.EPi.Imageshop>

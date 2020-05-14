@@ -70,6 +70,19 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
+        [ConfigurationProperty("freeCrop", DefaultValue = true, IsRequired = false)]
+        public bool FreeCrop
+        {
+            get
+            {
+                return (bool)this["freeCrop"];
+            }
+            set
+            {
+                this["freeCrop"] = value;
+            }
+        }
+
         [ConfigurationProperty("interfaceName", DefaultValue = null, IsRequired = false)]
         public string InterfaceName
         {

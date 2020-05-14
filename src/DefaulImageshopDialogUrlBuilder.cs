@@ -43,6 +43,7 @@ namespace Geta.EPi.Imageshop
             string profileId = ImageshopSettings.Instance.ProfileID;
             bool showSizeDialog = ImageshopSettings.Instance.ShowSizeDialog;
             bool showCropDialog = ImageshopSettings.Instance.ShowCropDialog;
+            bool freeCropDialog = ImageshopSettings.Instance.FreeCrop;
             string sizePresets = ImageshopConfigurationSection.Instance.FormattedSizePresets;
 
             var query = HttpUtility.ParseQueryString(string.Empty);
@@ -75,10 +76,12 @@ namespace Geta.EPi.Imageshop
 
                 showSizeDialog = configurationAttribute.ShowSizeDialog;
                 showCropDialog = configurationAttribute.ShowCropDialog;
+                freeCropDialog = configurationAttribute.FreeCrop;
             }
 
             query.Add("SHOWSIZEDIALOGUE", showSizeDialog.ToString().ToLowerInvariant());
             query.Add("SHOWCROPDIALOGUE", showCropDialog.ToString().ToLowerInvariant());
+            query.Add("FREECROP", freeCropDialog.ToString().ToLowerInvariant());
             query.AddIfNotNull("IMAGESHOPINTERFACENAME", interfaceName);
             query.AddIfNotNull("IMAGESHOPDOCUMENTPREFIX", documentPrefix);
             query.AddIfNotNull("PROFILEID", profileId);

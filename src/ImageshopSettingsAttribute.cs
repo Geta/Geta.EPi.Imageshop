@@ -10,6 +10,7 @@ namespace Geta.EPi.Imageshop
         {
             ShowSizeDialog = true;
             ShowCropDialog = true;
+            FreeCrop = true;
             PreviewCropName = string.Empty;
             CropName = string.Empty;
         }
@@ -31,6 +32,9 @@ namespace Geta.EPi.Imageshop
 
         [Description("Show crop dialog. Default is true.")]
         public bool ShowCropDialog { get; set; }
+
+        [Description("Free croping is selected when selecting an image. Default is true.")]
+        public bool FreeCrop { get; set; }
 
         [Description("Name of the crop to use for preview when editing. Default is empty string.")]
         public string PreviewCropName { get; set; }

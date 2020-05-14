@@ -63,6 +63,7 @@
             var token = "<%= ImageshopSettings.Instance.Token %>";
             var showSizeDialog = "<%= ImageshopSettings.Instance.ShowSizeDialog.ToString().ToLowerInvariant() %>";
             var showCropDialog = "<%= ImageshopSettings.Instance.ShowCropDialog.ToString().ToLowerInvariant() %>";
+            var freeCrop = "<%= ImageshopSettings.Instance.FreeCrop.ToString().ToLowerInvariant() %>";
             var interfaceName = "<%= HttpUtility.UrlEncode(ImageshopSettings.Instance.InterfaceName) %>";
             var documentPrefix = "<%= HttpUtility.UrlEncode(ImageshopSettings.Instance.DocumentPrefix) %>";
             var sizePresets = "<%= HttpUtility.UrlEncode(ImageshopConfigurationSection.Instance.FormattedSizePresets) %>";
@@ -73,7 +74,7 @@
                 params = loc.split('?')[1],
                 iframe = document.getElementById("MyFrame");
 
-            iframe.src = clienthost + "/InsertImage.aspx?" + params + '&IFRAMEINSERT=true&IMAGESHOPTOKEN=' + token + '&SHOWSIZEDIALOGUE=' + showSizeDialog + '&SHOWCROPDIALOGUE=' + showCropDialog + '&IMAGESHOPINTERFACENAME=' + interfaceName + '&IMAGESHOPDOCUMENTPREFIX=' + documentPrefix + '&IMAGESHOPSIZES=' + sizePresets;
+            iframe.src = clienthost + "/InsertImage.aspx?" + params + '&IFRAMEINSERT=true&IMAGESHOPTOKEN=' + token + '&SHOWSIZEDIALOGUE=' + showSizeDialog + '&SHOWCROPDIALOGUE=' + showCropDialog + '&FREECROP=' + freeCrop + '&IMAGESHOPINTERFACENAME=' + interfaceName + '&IMAGESHOPDOCUMENTPREFIX=' + documentPrefix + '&IMAGESHOPSIZES=' + sizePresets;
 
             $(window).resize(function () {
                 setSize();
