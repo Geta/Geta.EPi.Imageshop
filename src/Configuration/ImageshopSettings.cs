@@ -44,7 +44,7 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("showSizeDialog", DefaultValue = true, IsRequired = false)]
+        [ConfigurationProperty("showSizeDialog", DefaultValue = false, IsRequired = false)]
         public bool ShowSizeDialog
         {
             get
@@ -122,7 +122,7 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("profileId", DefaultValue = null, IsRequired = false)]
+        [ConfigurationProperty("profileId", DefaultValue = "SQUARE", IsRequired = false)]
         public string ProfileID
         {
             get

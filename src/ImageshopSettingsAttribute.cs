@@ -8,7 +8,7 @@ namespace Geta.EPi.Imageshop
     {
         public ImageshopSettingsAttribute()
         {
-            ShowSizeDialog = true;
+            ShowSizeDialog = false;
             ShowCropDialog = true;
             FreeCrop = true;
             PreviewCropName = string.Empty;
