@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-    <configSections>
-        <section name="Geta.EPi.Imageshop" type="Geta.EPi.Imageshop.Configuration.ImageshopConfigurationSection, Geta.EPi.Imageshop" xdt:Transform="Remove" xdt:Locator="Match(name)" />
-    </configSections>
-    <episerver.shell>
-        <protectedModules>
-            <add name="geta-epi-imageshop" xdt:Transform="Remove" xdt:Locator="Match(name)" />
-        </protectedModules>
-    </episerver.shell>
-    <Geta.EPi.Imageshop xdt:Transform="Remove">
-        <settings
-            token="AddYourTokenHere"
-            interfaceName=""
-            documentPrefix=""
-            culture="nb-NO"
-            profileId=""
-            showSizeDialog="true"
-            showCropDialog="true"
-            freeCrop="true"
-            initializeTinyMCEPlugin="true"
+  <configSections>
+    <section name="Geta.EPi.Imageshop" type="Geta.EPi.Imageshop.Configuration.ImageshopConfigurationSection, Geta.EPi.Imageshop" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+  </configSections>
+  <episerver.shell>
+    <protectedModules>
+      <add name="geta-epi-imageshop" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+    </protectedModules>
+  </episerver.shell>
+  <Geta.EPi.Imageshop xdt:Transform="Remove">
+    <settings
+        token="AddYourTokenHere"
+        interfaceName=""
+        documentPrefix=""
+        culture="nb-NO"
+        profileId="SQUARE"
+        showSizeDialog="true"
+        showCropDialog="true"
+        freeCrop="true"
+        initializeTinyMCEPlugin="true"
         />
-    </Geta.EPi.Imageshop>
+  </Geta.EPi.Imageshop>
 </configuration>
