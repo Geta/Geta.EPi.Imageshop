@@ -135,12 +135,12 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("webServiceUrl", DefaultValue = "http://imageshop.no/ws/v4.asmx", IsRequired = false)]
+        [ConfigurationProperty("webServiceUrl", DefaultValue = "https://webservices.imageshop.no/v4.asmx", IsRequired = false)]
         public string WebServiceUrl
         {
             get
             {
-                return this["webServiceUrl"] as string ?? "http://imageshop.no/ws/v4.asmx";
+                return this["webServiceUrl"] as string ?? "https://webservices.imageshop.no/v4.asmx";
             }
             set
             {
