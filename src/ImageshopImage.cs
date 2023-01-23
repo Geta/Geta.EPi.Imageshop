@@ -8,6 +8,7 @@ namespace Geta.EPi.Imageshop
         public virtual int Height { get; set; }
         public virtual string CropName { get; set; }
         public virtual ImageshopImageProfile Profile { get; set; }
+        public virtual IEnumerable<ImageshopInterfaceInfo> InterfaceList { get; set; }
 
         public virtual string GetCroppedUrl(string cropName)
         {
@@ -18,6 +19,12 @@ namespace Geta.EPi.Imageshop
 
             return Url;
         }
+    }
+
+    public class ImageshopInterfaceInfo
+    {
+        public virtual int InterfaceID { get; set; }
+        public virtual string InterfaceName { get; set; }
     }
 
     public class ImageshopImageProfile

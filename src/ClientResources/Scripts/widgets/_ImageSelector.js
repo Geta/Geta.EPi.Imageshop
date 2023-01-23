@@ -173,7 +173,8 @@
                         height: imageData.image.height,
                         changed: new Date(),
                         cropName: this.cropName,
-                        profile: imageProfileData
+                        profile: imageProfileData,
+                        interfaceList: imageData.InterfaceList
                     };
 
                     window.console && console.log(this.currentImage);
