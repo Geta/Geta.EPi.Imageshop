@@ -68,7 +68,7 @@ A TinyMCE plugin is included for browsing Imageshop images to add to your XhtmlS
 
 | Parameter		      		| Type       | Description                                                                      	|
 | ------------------------- | ---------- | ------------------------------------------------------------------------------------ |
-| baseUrl        			| string     | Base URL to Imageshop client. Default is http://client.imageshop.no/InsertImage.aspx |
+| baseUrl        			| string     | Base URL to Imageshop client. Default is https://client.imageshop.no/InsertImage2.aspx |
 | token          			| string     | Token identifying the user.                                                      	|
 | interfaceName  			| string     | Standard interface used when searching images.                                  		|
 | documentPrefix 			| string     | Standard document code prefix used when uploading images.                        	|
