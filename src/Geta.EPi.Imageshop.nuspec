@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0"?>
 <package>
     <metadata>
-        <id>Geta.EPi.Imageshop</id>
+        <id>Screentek.EPi.Imageshop</id>
         <version>$version$</version>
-        <title>Geta.EPi.Imageshop</title>
-        <authors>Geta</authors>
-        <owners>Geta</owners>
-        <projectUrl>https://github.com/Geta/Geta.EPi.Imageshop</projectUrl>
+        <title>Screentek.EPi.Imageshop</title>
+        <authors>Geta, Bouvet</authors>
+        <owners>Imageshop</owners>
+        <projectUrl>https://github.com/hognescreentek/Geta.EPi.Imageshop</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/Geta/Geta.EPi.Imageshop for more details.</description>
+        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/hognescreentek/Geta.EPi.Imageshop for more details.</description>
         <releaseNotes></releaseNotes>
         <copyright></copyright>
         <tags>Episerver, Imageshop</tags>
