@@ -1,17 +1,18 @@
-# Geta.EPi.Imageshop
+# Screentek.EPi.Imageshop
 
 * Master<br>
-![](http://tc.geta.no/app/rest/builds/buildType:(id:GetaPackages_EPiImageshop_00ci),branch:master/statusIcon)
 [![Platform](https://img.shields.io/badge/Platform-.NET%204.6.1-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
 [![Platform](https://img.shields.io/badge/Episerver-%2011-orange.svg?style=flat)](http://world.episerver.com/cms/)
 
 [Imageshop](http://www.imageshop.org) is an online-based Digital Asset Management (DAM) software. This module integrates Imageshop in the [Episerver](http://www.episerver.com) CMS User Interface. It contains a custom property and a TinyMCE plugin that launches the Imageshop image selection interface in a dialogue.
 
+The original repo [from GETA](https://github.com/geta/geta.epi.imageshop) is outdated. This fork contains the latest version of the plugin for Imageshop.
+
 ## How to get started
 
-Start by installing NuGet package (use [Episerver Nuget](http://nuget.episerver.com))
+Start by installing NuGet package (use [the Nuget.org feed](https://www.nuget.org/packages/Screentek.EPi.Imageshop/))) or [the Optimizely feed](https://nuget.optimizely.com/package/?id=Screentek.EPi.Imageshop))
 
-    Install-Package Geta.EPi.Imageshop
+    Install-Package Screentek.EPi.Imageshop
 
 ### Configure access token
 
@@ -77,7 +78,7 @@ A TinyMCE plugin is included for browsing Imageshop images to add to your XhtmlS
 | showCropDialog		 	| true/false | Indicates whether the crop dialogue should be show. Default is true.             	|
 | initializeTinyMCEPlugin	| true/false | Version 1.7.0, enables plug in for TinyMCE v > 2.0						            |
 
-See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples.
+See configuration section &lt;screentek.epi.imageshop&gt; in web.config for examples.
 
 ## Screenshots
 
@@ -88,5 +89,6 @@ See configuration section &lt;geta.epi.imageshop&gt; in web.config for examples.
 ![ScreenShot](/docs/tinymce-plugin.jpg)
 
 ## Changelog
-2.1. Support for Episerver 11
-2.2. Version 1.7.0 Support for TinyMCE > 2.0. Added new configuration parameter for TinyMCE plugin initialization.
+- **v2.4.0**: Rename to Screentek.EPi.Imageshop, smaller bugfixes
+
+For earlier versions, see https://github.com/geta/geta.epi.imageshop
