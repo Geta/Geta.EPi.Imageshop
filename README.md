@@ -16,7 +16,7 @@ Start by installing NuGet package (use [the Nuget.org feed](https://www.nuget.or
 
 ### Configure access token
 
-After the package is successfully installed you need to add your access token to configuration section &lt;geta.epi.imageshop&gt; in web.config.
+After the package is successfully installed you need to add your access token to configuration section &lt;screentek.epi.imageshop&gt; in web.config.
 
 ## Basics
 
