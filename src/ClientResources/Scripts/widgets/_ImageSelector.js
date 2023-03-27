@@ -153,33 +153,49 @@
             },
 
             setBasicImage: function (data) {
-                var imageData = JSON.parse(data.split(";")[0]);
-                var textData = imageData.text[this.preferredLanguage];
-                window.console && console.log(imageData);
+                try {
+                    var imageData = JSON.parse(data.split(";")[0]);
+                    var textData = imageData.text[this.preferredLanguage];
+                    window.console && console.log(imageData);
 
-                this.currentImage = {
-                    code: imageData.code,
-                    url: imageData.image.file,
-                    width: imageData.image.width,
-                    height: imageData.image.height,
-                    changed: new Date(),
-                    cropName: this.cropName
-                };
+                    var imageProfileData = null;
+                    if (imageData.profile) {
+                        imageProfileData = {
+                            name: imageData.profile.name,
+                            profileSizes: imageData.profile.profileSizes
+                        }
+                    }
 
-                if (textData) {
-                    this.currentImage.name = textData.title;
-                    this.currentImage.credits = textData.credits;
-                    this.currentImage.description = textData.description;
-                    this.currentImage.rights = textData.rights;
-                    this.currentImage.tags = textData.tags;
+                    this.currentImage = {
+                        code: imageData.code,
+                        url: imageData.image.file,
+                        width: imageData.image.width,
+                        height: imageData.image.height,
+                        changed: new Date(),
+                        cropName: this.cropName,
+                        profile: imageProfileData,
+                        interfaceList: imageData.InterfaceList
+                    };
+
+                    window.console && console.log(this.currentImage);
+
+                    if (textData) {
+                        this.currentImage.name = textData.title;
+                        this.currentImage.credits = textData.credits;
+                        this.currentImage.description = textData.description;
+                        this.currentImage.rights = textData.rights;
+                        this.currentImage.tags = textData.tags;
+                    }
+
+                    if (imageData.videos) {
+                        this.currentImage.aspectRatio = imageData.aspectratio;
+                        this.currentImage.videos = imageData.videos;
+                    }
+
+                    window.console && console.log(this.currentImage);
+                } catch (error) {
+                    console.log("Error _imageSelector setBasicImage: " + error);
                 }
-
-                if (imageData.videos) {
-                    this.currentImage.aspectRatio = imageData.aspectratio;
-                    this.currentImage.videos = imageData.videos;
-                }
-
-                window.console && console.log(this.currentImage);
             },
 
             setExtendedImage: function (data) {
