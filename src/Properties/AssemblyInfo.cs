@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Geta.EPi.Imageshop")]
+[assembly: AssemblyTitle("Screentek.EPi.Imageshop")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Geta")]
-[assembly: AssemblyProduct("Geta.EPi.Imageshop")]
+[assembly: AssemblyCompany("Screentek")]
+[assembly: AssemblyProduct("Screentek.EPi.Imageshop")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

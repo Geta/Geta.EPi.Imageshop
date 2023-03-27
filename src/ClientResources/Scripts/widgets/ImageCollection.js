@@ -9,7 +9,7 @@
 
         "dijit/form/Button",
 
-        "geta-epi-imageshop/widgets/_ImageSelector",
+        "screentek-epi-imageshop/widgets/_ImageSelector",
 
         "epi/epi",
         "epi/dependency",
@@ -37,7 +37,7 @@
 
         template
     ) {
-        return declare("geta-epi-imageshop/widgets/ImageCollection", [_ImageSelector], {
+        return declare("screentek-epi-imageshop/widgets/ImageCollection", [_ImageSelector], {
             //
             // Private
             //
@@ -121,13 +121,13 @@
             },
 
             _addHtmlNodesForImage: function(image) {
-                var li = domConstruct.create("li", { "class": "geta-image-list-item clearfix" }, this.imageCollectionNode);
-                var imageWrapperNode = domConstruct.create("div", { "class": "geta-image-wrapper" }, li);
+                var li = domConstruct.create("li", { "class": "screentek-image-list-item clearfix" }, this.imageCollectionNode);
+                var imageWrapperNode = domConstruct.create("div", { "class": "screentek-image-wrapper" }, li);
 
-                domConstruct.create("img", { "class": "geta-image", "src": this._getPreviewImageUrl(image) }, imageWrapperNode);
-                domConstruct.create("a", { "href": image.url, "class": "geta-image-url", "innerHTML": this._getPreviewImageUrl(image) }, li);
+                domConstruct.create("img", { "class": "screentek-image", "src": this._getPreviewImageUrl(image) }, imageWrapperNode);
+                domConstruct.create("a", { "href": image.url, "class": "screentek-image-url", "innerHTML": this._getPreviewImageUrl(image) }, li);
 
-                var actionsWrapperNode = domConstruct.create("div", { "class": "geta-actions-wrapper" }, li);
+                var actionsWrapperNode = domConstruct.create("div", { "class": "screentek-actions-wrapper" }, li);
 
                 // Sort up button
                 var sortUpLink = domConstruct.create("a", { href: "javascript:void(0)" }, actionsWrapperNode);

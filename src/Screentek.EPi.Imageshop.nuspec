@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Screentek.EPi.Imageshop</id>
+        <version>$version$</version>
+<<<<<<< Updated upstream:src/Geta.EPi.Imageshop.nuspec
+        <title>Screentek.EPi.Imageshop</title>
+        <authors>Geta, Bouvet</authors>
+        <owners>Imageshop</owners>
+        <projectUrl>https://github.com/hognescreentek/Geta.EPi.Imageshop</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/hognescreentek/Geta.EPi.Imageshop for more details.</description>
+=======
+<<<<<<< Updated upstream:src/Geta.EPi.Imageshop.nuspec
+        <title>Geta.EPi.Imageshop</title>
+        <authors>Geta</authors>
+        <owners>Geta</owners>
+        <projectUrl>https://github.com/Geta/Geta.EPi.Imageshop</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/Geta/Geta.EPi.Imageshop for more details.</description>
+=======
+        <title>Screentek.EPi.Imageshop</title>
+        <authors>Screentek, Bouvet</authors>
+        <owners>Imageshop</owners>
+        <projectUrl>https://github.com/hognescreentek/Screentek.EPi.Imageshop</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/hognescreentek/Screentek.EPi.Imageshop for more details.</description>
+>>>>>>> Stashed changes:src/Screentek.EPi.Imageshop.nuspec
+>>>>>>> Stashed changes:src/Screentek.EPi.Imageshop.nuspec
+        <releaseNotes></releaseNotes>
+        <copyright></copyright>
+        <tags>Episerver, Imageshop</tags>
+        <!--<repository type="git" url="URL" branch="BRANCH_NAME" commit="COMMIT" />-->
+        <dependencies>
+          <dependency id="EPiServer.Framework" version="[11.1.0,12.0]" />
+          <dependency id="EPiServer.CMS.Core" version="[11.1.0,12.0]" />
+          <dependency id="EPiServer.CMS.TinyMce" version="2.0.0" />
+          <dependency id="Microsoft.Net.Http" version="2.2.19" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\$configuration$\Screentek.EPi.Imageshop.dll" target="lib\net461\" />
+        <file src="bin\$configuration$\Screentek-EPi-Imageshop.zip" target="content\modules\_protected\screentek-epi-imageshop\" />
+        <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\" />
+        <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\" />
+        <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\images\" />
+        <file src="ImageshopImage.cshtml" target="content\Views\Shared\DisplayTemplates\" />
+        <file src="ImageshopVideo.cshtml" target="content\Views\Shared\DisplayTemplates\" />
+        <file src="scripts\jwplayer.flash.swf" target="content\scripts\" />
+        <file src="scripts\jwplayer.html5.js" target="content\scripts\" />
+        <file src="scripts\jwplayer.js" target="content\scripts\" />
+        <file src="scripts\jwplayer.imageshop.js" target="content\scripts\" />
+        <file src="web.config.install.xdt" target="content\" />
+        <file src="web.config.uninstall.xdt" target="content\" />
+    </files>
+</package>

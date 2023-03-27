@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Geta.EPi.Imageshop.Extensions
+namespace Screentek.EPi.Imageshop.Extensions
 {
     public static class HttpClientExtensions
     {

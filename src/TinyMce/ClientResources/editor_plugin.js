@@ -1,9 +1,9 @@
 ﻿"use strict";
 var tinymce = tinymce || {};
-tinymce.PluginManager.add("getaepiimageshop", function (ed, url) {
+tinymce.PluginManager.add("screentekepiimageshop", function (ed, url) {
     var imageNode;
     // Register commands
-    ed.addCommand('mcegetaepiimageshop', function () {
+    ed.addCommand('mcescreentekepiimageshop', function () {
         var dialogUrl = url + "/InsertImage.aspx?TINYMCE=true";
 
         if (ed.selection !== null && ed.selection.getNode() !== null && ed.selection.getNode().src !== null)
@@ -20,9 +20,9 @@ tinymce.PluginManager.add("getaepiimageshop", function (ed, url) {
             });
     });
     // Register buttons
-    ed.addButton("getaepiimageshop", {
+    ed.addButton("screentekepiimageshop", {
         title: "Insert/Upload Imageshop Image",
-        cmd: "mcegetaepiimageshop",
+        cmd: "mcescreentekepiimageshop",
         image: url + "/images/icon.gif",
         onPostRender: function () {
             // Add a node change handler, selects the button in the UI when a image is selected
@@ -40,10 +40,10 @@ tinymce.PluginManager.add("getaepiimageshop", function (ed, url) {
         getMetadata: function () {
             return {
                 name: "Imageshop image plugin",
-                url: "http://geta.se",
-                author: 'Geta AS, Mattias Olsson, tinymce 2.x compatible by Inmeta AS, Fredrik Skarderud',
-                authorurl: 'http://geta.se',
-                infourl: 'http://geta.se',
+                url: "http://screentek.se",
+                author: 'Screentek AS, Mattias Olsson, tinymce 2.x compatible by Inmeta AS, Fredrik Skarderud',
+                authorurl: 'http://screentek.se',
+                infourl: 'http://screentek.se',
                 version: tinymce.majorVersion + "." + tinymce.minorVersion
             };
         }

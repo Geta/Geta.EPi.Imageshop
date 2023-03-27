@@ -1,4 +1,4 @@
-﻿using EPiServer.Editor.TinyMCE;
+﻿using EPiServer.Editor;
 
 namespace Geta.EPi.Imageshop.TinyMce
 {

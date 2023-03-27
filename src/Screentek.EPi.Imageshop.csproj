@@ -7,8 +7,8 @@
     <ProjectGuid>{550323D0-AB89-4291-91BD-4941FE085305}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Geta.EPi.Imageshop</RootNamespace>
-    <AssemblyName>Geta.EPi.Imageshop</AssemblyName>
+    <RootNamespace>Screentek.EPi.Imageshop</RootNamespace>
+    <AssemblyName>Screentek.EPi.Imageshop</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
@@ -226,7 +226,7 @@
     <None Include="EPiServerLog.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Geta.EPi.Imageshop.nuspec">
+    <None Include="Screentek.EPi.Imageshop.nuspec">
       <SubType>Designer</SubType>
     </None>
     <None Include="ImageshopVideo.cshtml" />
