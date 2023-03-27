@@ -1,2 +1,2 @@
-.nuget\.\nuget pack src/Geta.EPi.Imageshop.csproj -OutputDirectory NugetReleases
+.nuget\.\nuget pack src/Screentek.EPi.Imageshop.csproj -OutputDirectory NugetReleases
 pause

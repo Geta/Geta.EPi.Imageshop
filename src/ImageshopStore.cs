@@ -1,10 +1,10 @@
 ﻿using System.Web.Mvc;
 using EPiServer.Shell.Services.Rest;
-using Geta.EPi.Imageshop.Configuration;
-using Geta.EPi.Imageshop.WebService;
-using Geta.EPi.Imageshop.WebService.Responses;
+using Screentek.EPi.Imageshop.Configuration;
+using Screentek.EPi.Imageshop.WebService;
+using Screentek.EPi.Imageshop.WebService.Responses;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     [RestStore("imageshopstore")]
     public class ImageshopStore : RestControllerBase

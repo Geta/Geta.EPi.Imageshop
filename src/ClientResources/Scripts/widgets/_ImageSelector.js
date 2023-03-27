@@ -39,7 +39,7 @@
         dependency
     ) {
 
-        return declare("geta-epi-imageshop/widgets/_ImageSelector", [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, _ValueRequiredMixin, _HasChildDialogMixin, _OnDijitClickMixin], {
+        return declare("screentek-epi-imageshop/widgets/_ImageSelector", [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, _ValueRequiredMixin, _HasChildDialogMixin, _OnDijitClickMixin], {
             baseUrl: null,
             browserClass: "imageshop-browser",
             closeBtnId: "imageshop-frame-container-close",

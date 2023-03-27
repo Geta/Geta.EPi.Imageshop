@@ -3,7 +3,7 @@ using EPiServer.Core;
 using EPiServer.Logging;
 using Newtonsoft.Json;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     public abstract class PropertyJsonSerializedObject<T> : PropertyLongString where T : class
     {

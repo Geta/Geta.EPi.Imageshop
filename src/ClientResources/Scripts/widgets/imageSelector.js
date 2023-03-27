@@ -3,7 +3,7 @@
         "dojo/_base/lang",
         "dojo/dom-class",
 
-        "geta-epi-imageshop/widgets/_ImageSelector",
+        "screentek-epi-imageshop/widgets/_ImageSelector",
 
         "epi/epi",
         'dojo/text!./templates/ImageSelector.html',
@@ -21,7 +21,7 @@
         template
     ) {
 
-        return declare("geta-epi-imageshop/widgets/ImageSelector", [_ImageSelector], {
+        return declare("screentek-epi-imageshop/widgets/ImageSelector", [_ImageSelector], {
             //
             // Public
             //

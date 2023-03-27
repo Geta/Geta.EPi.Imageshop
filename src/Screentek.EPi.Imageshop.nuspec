@@ -21,11 +21,11 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\$configuration$\Geta.EPi.Imageshop.dll" target="lib\net461\" />
-        <file src="bin\$configuration$\Geta-EPi-Imageshop.zip" target="content\modules\_protected\geta-epi-imageshop\" />
-        <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
-        <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\" />
-        <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\getaepiimageshop\images\" />
+        <file src="bin\$configuration$\Screentek.EPi.Imageshop.dll" target="lib\net461\" />
+        <file src="bin\$configuration$\Screentek-EPi-Imageshop.zip" target="content\modules\_protected\screentek-epi-imageshop\" />
+        <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\" />
+        <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\" />
+        <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\images\" />
         <file src="ImageshopImage.cshtml" target="content\Views\Shared\DisplayTemplates\" />
         <file src="ImageshopVideo.cshtml" target="content\Views\Shared\DisplayTemplates\" />
         <file src="scripts\jwplayer.flash.swf" target="content\scripts\" />
