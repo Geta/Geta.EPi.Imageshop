@@ -1,6 +1,6 @@
 # Screentek.EPi.Imageshop
 
-* Master<br>
+* Master
 [![Platform](https://img.shields.io/badge/Platform-.NET%204.6.1-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
 [![Platform](https://img.shields.io/badge/Episerver-%2011-orange.svg?style=flat)](http://world.episerver.com/cms/)
 
@@ -82,11 +82,11 @@ See configuration section &lt;screentek.epi.imageshop&gt; in web.config for exam
 
 ## Screenshots
 
-![ScreenShot](/docs/epi-dialogue.jpg)
+![ScreenShot](https://raw.githubusercontent.com/hognescreentek/Geta.EPi.Imageshop/master/docs/epi-dialogue.jpg)
 
-![ScreenShot](/docs/imageshop-selection.jpg)
+![ScreenShot](https://raw.githubusercontent.com/hognescreentek/Geta.EPi.Imageshop/master/docs/imageshop-selection.jpg)
 
-![ScreenShot](/docs/tinymce-plugin.jpg)
+![ScreenShot](https://raw.githubusercontent.com/hognescreentek/Geta.EPi.Imageshop/master/docs/tinymce-plugin.jpg)
 
 ## Changelog
 - **v2.4.0**: Rename to Screentek.EPi.Imageshop, smaller bugfixes

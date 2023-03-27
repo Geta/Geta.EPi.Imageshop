@@ -2,15 +2,18 @@
 <package>
     <metadata>
         <id>Screentek.EPi.Imageshop</id>
+        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/hognescreentek/Geta.EPi.Imageshop for more details.</description>
         <version>$version$</version>
         <title>Screentek.EPi.Imageshop</title>
+        <readme>docs\README.md</readme>
         <authors>Geta, Bouvet</authors>
         <owners>Imageshop</owners>
         <projectUrl>https://github.com/hognescreentek/Geta.EPi.Imageshop</projectUrl>
+        <license type="expression">Apache-2.0</license>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Imageshop Episerver integration. Contains property editor for single image and video and multiple images and videos as well as a TinyMCE plugin. See https://github.com/hognescreentek/Geta.EPi.Imageshop for more details.</description>
-        <releaseNotes></releaseNotes>
-        <copyright></copyright>
+        <repository type="git" url="https://github.com/hognescreentek/Geta.EPi.Imageshop" />
+        <copyright>Copyright © Imageshop.no</copyright>
+        <releaseNotes>v2.4.0: Rename to Screentek.EPi.Imageshop, smaller bugfixes</releaseNotes>
         <tags>Episerver, Imageshop</tags>
         <!--<repository type="git" url="URL" branch="BRANCH_NAME" commit="COMMIT" />-->
         <dependencies>
@@ -26,6 +29,7 @@
         <file src="TinyMce\ClientResources\editor_plugin.js" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\" />
         <file src="TinyMce\ClientResources\InsertImage.aspx" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\" />
         <file src="TinyMce\ClientResources\images\icon.gif" target="content\Util\Editor\tinymce\plugins\screentekepiimageshop\images\" />
+        <file src="../README.md" target="docs\"/>
         <file src="ImageshopImage.cshtml" target="content\Views\Shared\DisplayTemplates\" />
         <file src="ImageshopVideo.cshtml" target="content\Views\Shared\DisplayTemplates\" />
         <file src="scripts\jwplayer.flash.swf" target="content\scripts\" />
