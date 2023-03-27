@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     public class ImageshopVideo : ImageshopFile
     {

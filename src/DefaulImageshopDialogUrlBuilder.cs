@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web;
 using EPiServer.ServiceLocation;
-using Geta.EPi.Imageshop.Configuration;
-using Geta.EPi.Imageshop.Extensions;
+using Screentek.EPi.Imageshop.Configuration;
+using Screentek.EPi.Imageshop.Extensions;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     [ServiceConfiguration(typeof(IImageshopDialogUrlBuilder), Lifecycle = ServiceInstanceScope.Singleton)]
     public class DefaulImageshopDialogUrlBuilder : IImageshopDialogUrlBuilder

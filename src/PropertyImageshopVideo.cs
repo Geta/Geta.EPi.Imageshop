@@ -1,6 +1,6 @@
 ﻿using EPiServer.PlugIn;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     [PropertyDefinitionTypePlugIn(DisplayName = "Imageshop Video")]
     public class PropertyImageshopVideo : PropertyJsonSerializedObject<ImageshopVideo>

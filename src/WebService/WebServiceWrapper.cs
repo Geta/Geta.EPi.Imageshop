@@ -1,9 +1,9 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Geta.EPi.Imageshop.Extensions;
-using Geta.EPi.Imageshop.WebService.Responses;
+using Screentek.EPi.Imageshop.Extensions;
+using Screentek.EPi.Imageshop.WebService.Responses;
 
-namespace Geta.EPi.Imageshop.WebService
+namespace Screentek.EPi.Imageshop.WebService
 {
     public class WebServiceWrapper : HttpClient
     {

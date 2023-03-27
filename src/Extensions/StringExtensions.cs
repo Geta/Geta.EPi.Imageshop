@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Geta.EPi.Imageshop.Extensions
+namespace Screentek.EPi.Imageshop.Extensions
 {
     public static class StringExtensions
     {

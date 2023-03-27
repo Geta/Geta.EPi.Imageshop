@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     public interface IImageshopDialogUrlBuilder
     {

@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Geta.EPi.Imageshop.Configuration
+namespace Screentek.EPi.Imageshop.Configuration
 {
     public class ImageshopSettings : ConfigurationElement
     {
@@ -170,7 +170,7 @@ namespace Geta.EPi.Imageshop.Configuration
 
         public static class TinyMCEButtons
         {
-            public const string ImageshopImage = "getaepiimageshop";
+            public const string ImageshopImage = "screentekepiimageshop";
         }
     }
 }

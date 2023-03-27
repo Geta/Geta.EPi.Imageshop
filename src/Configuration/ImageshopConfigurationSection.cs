@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Web.Configuration;
 
-namespace Geta.EPi.Imageshop.Configuration
+namespace Screentek.EPi.Imageshop.Configuration
 {
     public class ImageshopConfigurationSection : ConfigurationSection
     {
@@ -22,11 +22,11 @@ namespace Geta.EPi.Imageshop.Configuration
 
         public static ImageshopConfigurationSection GetSection()
         {
-            var section = WebConfigurationManager.GetSection("Geta.EPi.Imageshop") as ImageshopConfigurationSection;
+            var section = WebConfigurationManager.GetSection("Screentek.EPi.Imageshop") as ImageshopConfigurationSection;
 
             if (section == null)
             {
-                throw new ConfigurationErrorsException("The <Geta.EPi.Imageshop> configuration section could not be found in web.config.");
+                throw new ConfigurationErrorsException("The <Screentek.EPi.Imageshop> configuration section could not be found in web.config.");
             }
 
             return section;

@@ -49,7 +49,7 @@
         <ProjectDir Condition="$(ProjectDir) == ''">$(MSBuildProjectDirectory)\..\</ProjectDir>
         <NuGetExe>$(SolutionDir)\.nuget\NuGet.exe</NuGetExe>
         <TmpOutDir>$(ProjectDir)\tmp</TmpOutDir>
-        <NuspecFile>$(ProjectDir)\Geta.EPi.Imageshop.nuspec</NuspecFile>
+        <NuspecFile>$(ProjectDir)\Screentek.EPi.Imageshop.nuspec</NuspecFile>
     </PropertyGroup>
 
     <Target Name="CreateNugetPackage" AfterTargets="Build">
@@ -57,7 +57,7 @@
             <Version></Version>
         </PropertyGroup>
 
-        <GetVersion AssemblyPath="$(ProjectDir)bin\$(Configuration)\Geta.EPi.Imageshop.dll">
+        <GetVersion AssemblyPath="$(ProjectDir)bin\$(Configuration)\Screentek.EPi.Imageshop.dll">
             <Output TaskParameter="Version" PropertyName="Version" />
         </GetVersion>
 
@@ -78,7 +78,7 @@
         <!-- Create the Zip file -->
         <ZipDirectory
           InputPath="$(TmpOutDir)\content"
-          OutputFileName="$(OutDir)\Geta-EPi-Imageshop.zip"
+          OutputFileName="$(OutDir)\Screentek-EPi-Imageshop.zip"
           OverwriteExistingFile="true" />
 
         <!-- Cleanup -->
