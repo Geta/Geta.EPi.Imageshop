@@ -14,7 +14,13 @@ tinymce.PluginManager.add("screentekepiimageshop", function (ed, url) {
             width: 950,
             height: 650,
             scrollbars: 1,
-            inline: 1
+            inline: 1,
+            buttons: [
+                {
+                    text: 'Close',
+                    onclick: 'close'
+                }
+            ]
         }, {
                 plugin_url: url
             });
