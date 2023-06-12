@@ -4,7 +4,7 @@ tinymce.PluginManager.add("getaepiimageshop", function (ed, url) {
     var imageNode;
     // Register commands
     ed.addCommand('mcegetaepiimageshop', function () {
-        var dialogUrl = url + "/InsertImage.aspx?TINYMCE=true";
+        var dialogUrl = url + "/InsertImage.aspx?TINYMCE=true&TINYMCEEXTENDED=true";
 
         if (ed.selection !== null && ed.selection.getNode() !== null && ed.selection.getNode().src !== null)
             dialogUrl += "&IMAGE=" + encodeURIComponent(ed.selection.getNode().src);

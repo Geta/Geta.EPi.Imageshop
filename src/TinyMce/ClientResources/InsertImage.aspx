@@ -91,42 +91,72 @@
 
         });
 
-        function insert(file, title, width, height) {
+        function insert(file, title, width, height, alignment = null, descriptionstring = null) {
+
             var ed = tinyMCEPopup.editor, dom = ed.dom;
 
             var imgobj;
+            var descriptionobject = null;
 
-            if (height && height != 0) {
-
+            if (descriptionstring != null) {
+                descriptionobject = JSON.parse(descriptionstring);
                 imgobj = {
                     src: file,
-                    alt: title,
-                    title: title,
-                    border: 0,
-                    width: width,
-                    height: height
-                };
+                    alt: descriptionobject.Description ? descriptionobject.Description : descriptionobject.Name,
+                    border: null,
+                    'data-credits': descriptionobject.Credits,
+                    'data-authorName': descriptionobject.AuthorName,
+                    'data-tags': descriptionobject.Tags,
+                    'data-name': descriptionobject.Name,
+                    'data-description': descriptionobject.Description
+
+                }
+                if (height != 0) {
+                    imgobj.height = height;
+                }
+                if (width != 0) {
+                    imgobj.width = width;
+                }
             }
-            else if (width && width != 0) {
-                imgobj = {
-                    src: file,
-                    alt: title,
-                    title: title,
-                    border: 0,
-                    width: width
-                };
-            } else {
-                imgobj = {
-                    src: file,
-                    alt: title,
-                    title: title,
-                    border: 0
-                };
+            else {
+
+                if (height != 0) {
+
+                    imgobj = {
+                        src: file,
+                        alt: title,
+                        title: title,
+                        border: 0,
+                        width: width,
+                        height: height
+                    };
+                }
+                else if (width != 0) {
+                    imgobj = {
+                        src: file,
+                        alt: title,
+                        title: title,
+                        border: 0,
+                        width: width
+                    };
+                } else {
+                    imgobj = {
+                        src: file,
+                        alt: title,
+                        title: title,
+                        border: 0
+                    };
+                }
+            }
+
+            if (alignment != null) {
+                imgobj["style"] = "float: " + alignment;
             }
 
             tinyMCEPopup.execCommand('mceInsertContent', false, dom.createHTML('img', imgobj));
 
             tinyMCEPopup.close();
+
         }
 
     </script>
