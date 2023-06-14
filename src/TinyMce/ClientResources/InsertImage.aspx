@@ -56,7 +56,7 @@
 
         function listener(event) {
             var eventdata = event.data.split(";");
-            insert(eventdata[0], eventdata[1], eventdata[2], eventdata[3]);
+            insert(eventdata[0], eventdata[1], eventdata[2], eventdata[3], eventdata[4], eventdata[5]);
         }
 
         $(function () {
