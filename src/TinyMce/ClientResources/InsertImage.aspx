@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="false" %>
 
-<%@ Import Namespace="Geta.EPi.Imageshop.Configuration" %>
+<%@ Import Namespace="Screentek.EPi.Imageshop.Configuration" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

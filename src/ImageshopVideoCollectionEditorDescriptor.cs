@@ -4,7 +4,7 @@ using EPiServer.Shell;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     [EditorDescriptorRegistration(TargetType = typeof(IEnumerable<ImageshopVideo>))]
     public class ImageshopVideoCollectionEditorDescriptor : ImageshopEditorDescriptorBase
@@ -13,7 +13,7 @@ namespace Geta.EPi.Imageshop
 
         public ImageshopVideoCollectionEditorDescriptor()
         {
-            base.ClientEditingClass = "geta-epi-imageshop/widgets/ImageCollection";
+            base.ClientEditingClass = "screentek-epi-imageshop/widgets/ImageCollection";
         }
 
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)

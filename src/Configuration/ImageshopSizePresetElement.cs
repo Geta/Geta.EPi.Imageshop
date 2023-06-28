@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Geta.EPi.Imageshop.Configuration
+namespace Screentek.EPi.Imageshop.Configuration
 {
     public class ImageshopSizePresetElement : ConfigurationElementBase
     {

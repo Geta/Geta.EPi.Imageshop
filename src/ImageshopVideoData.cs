@@ -1,4 +1,4 @@
-﻿namespace Geta.EPi.Imageshop
+﻿namespace Screentek.EPi.Imageshop
 {
     public class ImageshopVideoData
     {

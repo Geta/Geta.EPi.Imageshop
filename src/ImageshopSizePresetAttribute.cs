@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     public class ImageshopSizePresetAttribute : Attribute

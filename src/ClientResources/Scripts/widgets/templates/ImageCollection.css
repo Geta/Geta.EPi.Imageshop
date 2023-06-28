@@ -1,10 +1,10 @@
-﻿.geta-image-select {
+﻿.screentek-image-select {
     border: 2px dashed #b2b9c1;
     padding: 4px;
     display: inline-block;
 }
 
-.geta-image-add-link {
+.screentek-image-add-link {
     width: 100px;
     height: 100px;
     display: block;
@@ -13,12 +13,12 @@
     background-size: 96px;
 }
 
-.geta-image-select.isVideo .geta-image-add-link {
+.screentek-image-select.isVideo .screentek-image-add-link {
     background: transparent url('../images/video_add.png') center center no-repeat;
     background-size: 96px;
 }
 
-.geta-image-list {
+.screentek-image-list {
     margin-top: 10px;
     background-color: #f8f9f9;
     padding: 4px 8px;
@@ -30,7 +30,7 @@
     min-height: 24px;
 }
 
-.geta-image-list-item {
+.screentek-image-list-item {
     display: table;
     width: 100%;
     background-color: #fff;
@@ -38,18 +38,18 @@
     margin: 4px 0;
 }
 
-.geta-image-wrapper {
+.screentek-image-wrapper {
     width: 75px;
     height: auto;
     display: table-cell;
 }
 
-.geta-image {
+.screentek-image {
     width: 100%;
     display: block;
 }
 
-.geta-image-url {
+.screentek-image-url {
     display: table-cell;
     width: 263px;
     height: 100%;
@@ -59,18 +59,18 @@
     vertical-align: middle;
 }
 
-.geta-actions-wrapper {
+.screentek-actions-wrapper {
     display: table-cell;
     width: 66px;
     white-space: nowrap;
 }
 
-    .geta-actions-wrapper a {
+    .screentek-actions-wrapper a {
         font-size: 14px;
     }
 
-    .geta-actions-wrapper .disabled,
-    .geta-action-wrapper .disabled:hover {
+    .screentek-actions-wrapper .disabled,
+    .screentek-action-wrapper .disabled:hover {
         color: #e0e0e0 !important;
         cursor: default;
     }
