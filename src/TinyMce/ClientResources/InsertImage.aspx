@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="false" %>
 
-<%@ Import Namespace="Geta.EPi.Imageshop.Configuration" %>
+<%@ Import Namespace="Screentek.EPi.Imageshop.Configuration" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,7 +56,7 @@
 
         function listener(event) {
             var eventdata = event.data.split(";");
-            insert(eventdata[0], eventdata[1], eventdata[2], eventdata[3]);
+            insert(eventdata[0], eventdata[1], eventdata[2], eventdata[3], eventdata[4], eventdata[5]);
         }
 
         $(function () {
@@ -74,7 +74,7 @@
                 params = loc.split('?')[1],
                 iframe = document.getElementById("MyFrame");
 
-            iframe.src = clienthost + "/InsertImage.aspx?" + params + '&IFRAMEINSERT=true&IMAGESHOPTOKEN=' + token + '&SHOWSIZEDIALOGUE=' + showSizeDialog + '&SHOWCROPDIALOGUE=' + showCropDialog + '&FREECROP=' + freeCrop + '&IMAGESHOPINTERFACENAME=' + interfaceName + '&IMAGESHOPDOCUMENTPREFIX=' + documentPrefix + '&IMAGESHOPSIZES=' + sizePresets;
+            iframe.src = clienthost + "/InsertImage2.aspx?" + params + '&IFRAMEINSERT=true&IMAGESHOPTOKEN=' + token + '&SHOWSIZEDIALOGUE=' + showSizeDialog + '&SHOWCROPDIALOGUE=' + showCropDialog + '&FREECROP=' + freeCrop + '&IMAGESHOPINTERFACENAME=' + interfaceName + '&IMAGESHOPDOCUMENTPREFIX=' + documentPrefix + '&IMAGESHOPSIZES=' + sizePresets;
 
             $(window).resize(function () {
                 setSize();
@@ -91,42 +91,72 @@
 
         });
 
-        function insert(file, title, width, height) {
+        function insert(file, title, width, height, alignment = null, descriptionstring = null) {
+
             var ed = tinyMCEPopup.editor, dom = ed.dom;
 
             var imgobj;
+            var descriptionobject = null;
 
-            if (height && height != 0) {
-
+            if (descriptionstring != null) {
+                descriptionobject = JSON.parse(descriptionstring);
                 imgobj = {
                     src: file,
-                    alt: title,
-                    title: title,
-                    border: 0,
-                    width: width,
-                    height: height
-                };
+                    alt: descriptionobject.Description ? descriptionobject.Description : descriptionobject.Name,
+                    border: null,
+                    'data-credits': descriptionobject.Credits,
+                    'data-authorName': descriptionobject.AuthorName,
+                    'data-tags': descriptionobject.Tags,
+                    'data-name': descriptionobject.Name,
+                    'data-description': descriptionobject.Description
+
+                }
+                if (height != 0) {
+                    imgobj.height = height;
+                }
+                if (width != 0) {
+                    imgobj.width = width;
+                }
             }
-            else if (width && width != 0) {
-                imgobj = {
-                    src: file,
-                    alt: title,
-                    title: title,
-                    border: 0,
-                    width: width
-                };
-            } else {
-                imgobj = {
-                    src: file,
-                    alt: title,
-                    title: title,
-                    border: 0
-                };
+            else {
+
+                if (height != 0) {
+
+                    imgobj = {
+                        src: file,
+                        alt: title,
+                        title: title,
+                        border: 0,
+                        width: width,
+                        height: height
+                    };
+                }
+                else if (width != 0) {
+                    imgobj = {
+                        src: file,
+                        alt: title,
+                        title: title,
+                        border: 0,
+                        width: width
+                    };
+                } else {
+                    imgobj = {
+                        src: file,
+                        alt: title,
+                        title: title,
+                        border: 0
+                    };
+                }
+            }
+
+            if (alignment != null) {
+                imgobj["style"] = "float: " + alignment;
             }
 
             tinyMCEPopup.execCommand('mceInsertContent', false, dom.createHTML('img', imgobj));
 
             tinyMCEPopup.close();
+
         }
 
     </script>

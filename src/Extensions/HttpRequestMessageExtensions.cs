@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Net.Http;
 
-namespace Geta.EPi.Imageshop.Extensions
+namespace Screentek.EPi.Imageshop.Extensions
 {
     public static class HttpRequestMessageExtensions
     {

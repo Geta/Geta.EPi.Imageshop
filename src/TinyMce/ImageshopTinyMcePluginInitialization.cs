@@ -4,9 +4,9 @@ using EPiServer.Cms.TinyMce.Core;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
-using Geta.EPi.Imageshop.Configuration;
+using Screentek.EPi.Imageshop.Configuration;
 
-namespace Geta.EPi.Imageshop.TinyMce
+namespace Screentek.EPi.Imageshop.TinyMce
 {
     [InitializableModule]
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
@@ -20,8 +20,8 @@ namespace Geta.EPi.Imageshop.TinyMce
                 {
                     config.Default()
                     .AddEpiserverSupport()
-                        .AddExternalPlugin("getaepiimageshop", "/Util/Editor/tinymce/plugins/getaepiimageshop/editor_plugin.js")
-                        .AppendToolbar("getaepiimageshop");
+                        .AddExternalPlugin("screentekepiimageshop", "/Util/Editor/tinymce/plugins/screentekepiimageshop/editor_plugin.js")
+                        .AppendToolbar("screentekepiimageshop");
                 });
         }
 

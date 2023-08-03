@@ -1,7 +1,7 @@
 ﻿using System.Collections.Specialized;
 using System.Web;
 
-namespace Geta.EPi.Imageshop.Extensions
+namespace Screentek.EPi.Imageshop.Extensions
 {
     public static class NameValueCollectionExtensions
     {

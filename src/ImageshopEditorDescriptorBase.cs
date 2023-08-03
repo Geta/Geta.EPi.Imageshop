@@ -8,7 +8,7 @@ using EPiServer.ServiceLocation;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 
-namespace Geta.EPi.Imageshop
+namespace Screentek.EPi.Imageshop
 {
     public abstract class ImageshopEditorDescriptorBase : EditorDescriptor
     {

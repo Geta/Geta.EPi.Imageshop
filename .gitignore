@@ -2,6 +2,9 @@
 [Bb]in/
 [Oo]bj/
 
+# Release folder for nuget package releases
+NugetReleases
+
 # mstest test results
 TestResults
 

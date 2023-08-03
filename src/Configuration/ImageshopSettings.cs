@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Geta.EPi.Imageshop.Configuration
+namespace Screentek.EPi.Imageshop.Configuration
 {
     public class ImageshopSettings : ConfigurationElement
     {
@@ -18,12 +18,12 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("baseUrl", DefaultValue = "https://client.imageshop.no/InsertImage.aspx", IsRequired = false)]
+        [ConfigurationProperty("baseUrl", DefaultValue = "https://client.imageshop.no/InsertImage2.aspx", IsRequired = false)]
         public string BaseUrl
         {
             get
             {
-                return this["baseUrl"] as string ?? "https://client.imageshop.no/InsertImage.aspx?IFRAMEINSERT=true";
+                return this["baseUrl"] as string ?? "https://client.imageshop.no/InsertImage2.aspx?IFRAMEINSERT=true";
             }
             set
             {
@@ -135,12 +135,12 @@ namespace Geta.EPi.Imageshop.Configuration
             }
         }
 
-        [ConfigurationProperty("webServiceUrl", DefaultValue = "http://imageshop.no/ws/v4.asmx", IsRequired = false)]
+        [ConfigurationProperty("webServiceUrl", DefaultValue = "https://webservices.imageshop.no/v4.asmx", IsRequired = false)]
         public string WebServiceUrl
         {
             get
             {
-                return this["webServiceUrl"] as string ?? "http://imageshop.no/ws/v4.asmx";
+                return this["webServiceUrl"] as string ?? "https://webservices.imageshop.no/v4.asmx";
             }
             set
             {
@@ -170,7 +170,7 @@ namespace Geta.EPi.Imageshop.Configuration
 
         public static class TinyMCEButtons
         {
-            public const string ImageshopImage = "getaepiimageshop";
+            public const string ImageshopImage = "screentekepiimageshop";
         }
     }
 }

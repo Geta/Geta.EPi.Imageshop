@@ -21,7 +21,7 @@
         },
 
         _getRestPath: function (name) {
-            return routes.getRestPath({ moduleArea: "geta-epi-imageshop", storeName: name });
+            return routes.getRestPath({ moduleArea: "screentek-epi-imageshop", storeName: name });
         }
     });
 });

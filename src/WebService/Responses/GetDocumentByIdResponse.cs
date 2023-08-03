@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Geta.EPi.Imageshop.WebService.Responses
+namespace Screentek.EPi.Imageshop.WebService.Responses
 {
     [Serializable]
     [XmlRoot("V4Document", Namespace = "http://imageshop.no/V4")]

@@ -5,7 +5,7 @@ using EPiServer.Framework.Serialization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
 
-namespace Geta.EPi.Imageshop.Extensions
+namespace Screentek.EPi.Imageshop.Extensions
 {
     public static class ImageshopVideoExtensions
     {
