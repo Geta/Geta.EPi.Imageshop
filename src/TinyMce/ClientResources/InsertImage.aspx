@@ -74,7 +74,7 @@
                 params = loc.split('?')[1],
                 iframe = document.getElementById("MyFrame");
 
-            iframe.src = clienthost + "/InsertImage.aspx?" + params + '&IFRAMEINSERT=true&IMAGESHOPTOKEN=' + token + '&SHOWSIZEDIALOGUE=' + showSizeDialog + '&SHOWCROPDIALOGUE=' + showCropDialog + '&FREECROP=' + freeCrop + '&IMAGESHOPINTERFACENAME=' + interfaceName + '&IMAGESHOPDOCUMENTPREFIX=' + documentPrefix + '&IMAGESHOPSIZES=' + sizePresets;
+            iframe.src = clienthost + "/InsertImage2.aspx?" + params + '&IFRAMEINSERT=true&IMAGESHOPTOKEN=' + token + '&SHOWSIZEDIALOGUE=' + showSizeDialog + '&SHOWCROPDIALOGUE=' + showCropDialog + '&FREECROP=' + freeCrop + '&IMAGESHOPINTERFACENAME=' + interfaceName + '&IMAGESHOPDOCUMENTPREFIX=' + documentPrefix + '&IMAGESHOPSIZES=' + sizePresets;
 
             $(window).resize(function () {
                 setSize();
